@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shreenathji Path Labs – Trusted Diagnostics</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+
+                          <!-- PARTICLES BACKGROUND -->
+
+<div id="particles"></div>
+
+
+<nav class="navbar" id="navbar">
+  <div class="nav-brand">
+    <div class="logo-icon"><i class="fas fa-microscope"></i></div>
+    <div>
+      <span class="brand-main">Shreenathji</span>
+      <span class="brand-sub">Path Labs</span>
+    </div>
+  </div>
+
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#appointment">Book Test</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+
+  <div class="nav-actions">
+    <button class="btn-outline" id="loginBtn">Login</button>
+    <button class="btn-primary" id="signupBtn">Sign Up</button>
+    <div class="user-menu" id="userMenu" style="display:none;">
+      <div class="avatar" id="userAvatar">U</div>
+      <div class="dropdown" id="userDropdown">
+        <a href="#" onclick="openDashboard()">
+            <i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="#" onclick="logoutUser()">
+            <i class="fas fa-sign-out-alt"></i> Logout</a>
+      </div>
+    </div>
+  </div>
+  <div class="hamburger" id="hamburger">
+    <i class="fas fa-bars"></i></div>
+</nav>
+
+
+
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-badge animate-fadeup delay-1">
+      <i class="fas fa-award"></i> NABL Accredited Laboratory
+    </div>
+
+    <h1 class="hero-title animate-fadeup delay-2">
+      Precision Diagnostics<br/>
+      <span class="gradient-text">You Can Trust</span>
+    </h1>
+
+    <p class="hero-sub animate-fadeup delay-3">
+      7+ years of diagnostic excellence ·
+       500+ tests · Home sample collection ·
+        Same-day reports
+    </p>
+
+    <div class="hero-actions animate-fadeup delay-4">
+      <a href="#appointment" class="btn-primary btn-lg pulse-btn">
+        <i class="fas fa-calendar-check"></i> Book Appointment
+      </a>
+
+      <a href="#services" class="btn-outline btn-lg">
+        <i class="fas fa-flask"></i> Our Tests
+      </a>
+    </div>
+
+    <div class="hero-stats animate-fadeup delay-5">
+      <div class="stat"><span class="stat-num" data-target="50000">0</span>
+        <span>+</span><p>Patients Served</p></div>
+      <div class="stat"><span class="stat-num" data-target="500">0</span>
+        <span>+</span><p>Tests Available</p></div>
+      <div class="stat"><span class="stat-num" data-target="25">0</span>
+        <span>+</span><p>Years Experience</p></div>
+      <div class="stat"><span class="stat-num" data-target="98">0</span>
+        <span>%</span><p>Accuracy Rate</p></div>
+    </div>
+  </div>
+
+  <div class="hero-visual animate-fadein delay-3">
+    <div class="dna-container">
+      <div class="dna-helix">
+        <div class="strand strand-a"></div>
+        <div class="strand strand-b"></div>
+        <div class="rungs" id="dnaRungs"></div>
+      </div>
+
+      <div class="float-badge badge-1"><i class="fas fa-vial"></i><span>Blood Tests</span></div>
+      <div class="float-badge badge-2"><i class="fas fa-x-ray"></i><span>Imaging</span></div>
+      <div class="float-badge badge-3"><i class="fas fa-heart-pulse"></i><span>ECG / Echo</span></div>
+    </div>
+  </div>
+
+  <div class="scroll-cue">
+    <span></span><span></span><span></span>
+  </div>
+</section>
+
+
+
+
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <span>🩸 Complete Blood Count &nbsp;·&nbsp;</span>
+    <span>🧬 DNA Testing &nbsp;·&nbsp;</span>
+    <span>💉 Thyroid Panel &nbsp;·&nbsp;</span>
+    <span>🫀 Cardiac Markers &nbsp;·&nbsp;</span>
+    <span>🧪 Liver Function &nbsp;·&nbsp;</span>
+    <span>🔬 Kidney Profile &nbsp;·&nbsp;</span>
+    <span>🩺 Diabetes Panel &nbsp;·&nbsp;</span>
+    <span>🦠 Culture & Sensitivity &nbsp;·&nbsp;</span>
+    <span>📊 Lipid Profile &nbsp;·&nbsp;</span>
+    <span>🩸 Complete Blood Count &nbsp;·&nbsp;</span>
+    <span>🧬 DNA Testing &nbsp;·&nbsp;</span>
+    <span>💉 Thyroid Panel &nbsp;·&nbsp;</span>
+    <span>🫀 Cardiac Markers &nbsp;·&nbsp;</span>
+    <span>🧪 Liver Function &nbsp;·&nbsp;</span>
+    <span>🔬 Kidney Profile &nbsp;·&nbsp;</span>
+  </div>
+</div>
+
+
+
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">What We Offer</span>
+      <h2 class="section-title">Comprehensive 
+        <span class="gradient-text">Diagnostic Services</span>
+    </h2>
+      <p class="section-desc">State-of-the-art testing with certified
+         pathologists and automated analyzers</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal" data-delay="0">
+        <div class="svc-icon"><i class="fas fa-tint"></i></div>
+        <h3>Hematology</h3>
+        <p>CBC, ESR, Blood grouping, Peripheral smear, 
+            Coagulation tests & more</p>
+        <ul class="svc-list">
+            <li>Complete Blood Count (CBC)</li><li>ESR / PCV</li>
+            <li>Blood Grouping & Rh</li></ul>
+        <a href="#appointment" class="svc-link">Book Now 
+            <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card reveal" data-delay="100">
+        <div class="svc-icon"><i class="fas fa-flask"></i></div>
+        <h3>Biochemistry</h3>
+        <p>Complete metabolic panels, liver, kidney,
+             thyroid and diabetes tests</p>
+        <ul class="svc-list"><li>Blood Sugar (Fasting/PP/HbA1c)</li>
+            <li>Liver Function Test (LFT)</li>
+            <li>Kidney Function Test (KFT)</li></ul>
+        <a href="#appointment" class="svc-link">Book Now 
+            <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card reveal" data-delay="200">
+        <div class="svc-icon">
+            <i class="fas fa-viruses"></i>
+        </div>
+
+        <h3>Microbiology</h3>
+        <p>Culture, sensitivity, stool, urine & sputum examinations</p>
+
+        <ul class="svc-list">
+            <li>Urine Culture & Sensitivity</li>
+            <li>Blood Culture</li>
+            <li>Stool Routine</li>
+        </ul>
+
+        <a href="#appointment" class="svc-link">Book Now 
+            <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card reveal" data-delay="300">
+        <div class="svc-icon"><i class="fas fa-dna"></i></div>
+        <h3>Immunology</h3>
+        <p>Allergy tests,
+             thyroid antibodies,
+              viral markers & hormonal assays</p>
+
+        <ul class="svc-list">
+            <li>HIV / HBsAg / HCV</li>
+            <li>Thyroid Profile (T3/T4/TSH)</li>
+            <li>Widal / RA Factor</li>
+        </ul>
+
+        <a href="#appointment" class="svc-link">Book Now 
+            <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="service-card reveal" data-delay="400">
+        <div class="svc-icon">
+            <i class="fas fa-x-ray"></i>
+        </div>
+
+        <h3>Radiology</h3>
+        <p>Digital X-Ray,
+             Ultrasound,
+              ECG & Echocardiography services</p>
+
+        <ul class="svc-list">
+            <li>Digital X-Ray</li>
+            <li>USG Abdomen / Pelvis</li>
+            <li>ECG / 2D Echo</li>
+        </ul>
+
+        <a href="#appointment" class="svc-link">Book Now 
+            <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="service-card reveal" data-delay="500">
+        <div class="svc-icon"><i class="fas fa-home"></i></div>
+        <h3>Home Collection</h3>
+        <p>Certified phlebotomists visit your home at your preferred time slot</p>
+
+        <ul class="svc-list">
+            <li>Free Home Visit</li>
+            <li>Early Morning Slots</li>
+            <li>Report via WhatsApp / Email</li>
+        </ul>
+
+        <a href="#appointment" class="svc-link">Book Now
+             <i class="fas fa-arrow-right"></i>
+            </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section about-section" id="about">
+  <div class="container about-grid">
+    <div class="about-visual reveal">
+      <div class="about-img-wrap">
+        <div class="about-ring ring-1"></div>
+        <div class="about-ring ring-2"></div>
+
+        <div class="about-img-card">
+          <img class="nathji-img" src="nathji.jpeg">
+          <span>Est. 2021</span>
+        </div>
+      </div>
+
+
+      <div class="exp-badge">
+        <strong>7+</strong>
+        <span>Years of<br/>Excellence</span></div>
+    </div>
+
+
+    <div class="about-text">
+      <span class="section-label">Our Story</span>
+
+      <h2 class="section-title">Shreenathji
+         <span class="gradient-text">Path Labs</span></h2>
+
+      <p>Founded in 14/01/2021, 
+        <strong>Shreenathji Path Labs</strong> 
+        has been a cornerstone of diagnostic healthcare in our community.
+         With a team of experienced pathologists, microbiologists,
+          and technologists, we deliver accurate and timely reports.</p>
+
+      <div class="about-features">
+        <div class="af-item">
+            <i class="fas fa-check-circle"></i>
+            <span>NABL Accredited & ISO 9001:2018 Certified</span>
+              </div>
+
+        <div class="af-item">
+            <i class="fas fa-check-circle"></i>
+            <span>State-of-the-art fully automated analyzers</span>
+        </div>
+
+        <div class="af-item">
+            <i class="fas fa-check-circle"></i>
+            <span>500+ diagnostic tests under one roof</span>
+        </div>
+
+        <div class="af-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Expert team of 10+ qualified pathologists</span>
+        </div>
+
+        <div class="af-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Digital reports delivered within hours</span>
+        </div>
+
+        <div class="af-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Free home sample collection facility</span>
+        </div>
+      </div>
+
+
+      <div class="about-address">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>
+          <strong>Main Lab:</strong> malad West, Rathodi, Kharodi Road,<br/>
+          Mumbai, Maharashtra <br/>
+          <strong>Branch:</strong> Shop No. 18, Innas Wadi Market,
+           Near JP School – 400095
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section apt-section" id="appointment">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Easy Booking</span>
+      <h2 class="section-title">Book Your <span class="gradient-text">Appointment</span></h2>
+      <p class="section-desc">Fill the form below — our team will confirm within 30 minutes</p>
+    </div>
+
+
+    <div class="apt-grid">
+      <div class="apt-form-wrap reveal">
+        <form class="apt-form" id="aptForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" id="aptName" placeholder="Patient's full name" required/>
+            </div>
+
+
+            <div class="form-group">
+              <label>Age</label>
+              <input type="number" id="aptAge" placeholder="Age" min="1" max="120"/>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Mobile Number *</label>
+              <input type="tel" id="aptPhone" placeholder="+91 XXXXX XXXXX" required/>
+            </div>
+
+
+            <div class="form-group">
+              <label>Gender</label>
+              <select id="aptGender">
+                <option value="">Select</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="aptEmail" placeholder="email@example.com"/>
+          </div>
+
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Test / Package *</label>
+              <select id="aptTest" required>
+                <option value="">Select Test</option>
+                <option>Complete Blood Count (CBC)</option>
+                <option>Lipid Profile</option>
+                <option>Liver Function Test (LFT)</option>
+                <option>Kidney Function Test (KFT)</option>
+                <option>Thyroid Profile (T3/T4/TSH)</option>
+                <option>Blood Sugar (Fasting / PP)</option>
+                <option>HbA1c</option>
+                <option>HIV / HBsAg / HCV</option>
+                <option>Urine Routine</option>
+                <option>Stool Routine</option>
+                <option>Vitamin D / B12</option>
+                <option>Widal Test</option>
+                <option>X-Ray (Digital)</option>
+                <option>USG Abdomen</option>
+                <option>ECG</option>
+                <option>Full Body Checkup Package</option>
+                <option>Other (Specify below)</option>
+              </select>
+            </div>
+
+
+            <div class="form-group">
+              <label>Preferred Date *</label>
+              <input type="date" id="aptDate" required/>
+            </div>
+          </div>
+
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Time Slot</label>
+              <select id="aptTime">
+                <option>7:00 AM – 8:00 AM</option>
+                <option>8:00 AM – 9:00 AM</option>
+                <option>9:00 AM – 10:00 AM</option>
+                <option>10:00 AM – 11:00 AM</option>
+                <option>11:00 AM – 12:00 PM</option>
+                <option>2:00 PM – 4:00 PM</option>
+                <option>4:00 PM – 6:00 PM</option>
+                <option>6:00 PM – 8:00 PM</option>
+                <option>8:00 PM – 10:00 PM</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Sample Collection</label>
+              <select id="aptCollection">
+                <option>Walk-in at Lab</option>
+                <option>Home Collection</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Address / Notes</label>
+            <textarea id="aptAddress" rows="3" placeholder="Home address (if home collection) or additional notes…"></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary btn-block">
+            <i class="fas fa-calendar-check"></i> Confirm Appointment
+          </button>
+        </form>
+      </div>
+
+
+      <div class="apt-info reveal">
+        <div class="info-card">
+          <i class="fas fa-clock"></i>
+          <div><h4>Lab Hours</h4>
+          <p> Mon–Sun: Anytime<br/></p></div>
+        </div>
+
+        <div class="info-card">
+          <i class="fas fa-home"></i>
+          <div><h4>Home Collection</h4>
+          <p>Free home sample collection available within 5 km radius</p></div>
+        </div>
+
+        <div class="info-card">
+          <i class="fas fa-file-medical"></i>
+          <div><h4>Report Delivery</h4>
+          <p>Digital reports via WhatsApp & Email. Same-day for most tests.</p></div>
+        </div>
+
+        <div class="info-card whatsapp-card" onclick="openWhatsApp()">
+          <i class="fab fa-whatsapp"></i>
+          <div><h4>WhatsApp Us</h4>
+          <p>Quick queries & report sharing<br/>
+            <strong>+91 96532  81613</strong></p></div>
+        </div>
+
+        <div class="info-card call-card" onclick="makeCall()">
+          <i class="fas fa-phone-alt"></i>
+          <div><h4>Call Us</h4>
+          <p>Talk to our staff directly<br/><strong>+91 98765 43210</strong></p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section dashboard-section" id="dashboard" style="display:none;">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Your Portal</span>
+      <h2 class="section-title">Patient <span class="gradient-text">Dashboard</span></h2>
+    </div>
+
+    <div class="dashboard-grid">
+      <div class="dash-card" id="bookingsList">
+        <h3><i class="fas fa-calendar-alt"></i> My Appointments</h3>
+        <div id="bookingsContainer"><p class="empty-msg">No appointments yet.</p></div>
+      </div>
+
+      <div class="dash-card">
+        <h3><i class="fas fa-user-circle"></i> My Profile</h3>
+        <div id="profileContainer"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section contact-section" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Find Us</span>
+      <h2 class="section-title">Our <span class="gradient-text">Location & Contact</span></h2>
+    </div>
+
+    <div class="contact-grid">
+      <div class="map-wrap reveal">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.6!2d73.8700!3d25.0678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDA0JzA0LjEiTiA3M8KwNTInMTIuMCJF!5e0!3m2!1sen!2sin!4v1640000000000!5m2!1sen!2sin"
+          width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+        <a class="map-btn" href="https://maps.google.com/?q=Malad west + kharodi Road,Mumbai,Maharashtra" target="_blank">
+          <i class="fas fa-directions"></i> Get Directions
+        </a>
+      </div>
+
+      <div class="contact-details reveal">
+        <div class="contact-item">
+          <div class="ci-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+
+          <div>
+            <h4>Main Laboratory</h4>
+            <p>Shop no 18, Innas Wadi Market, Kharodi Road, Near Sir JP School
+                <br/>Mumbai, Malad west – 400095</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="ci-icon"><i class="fas fa-map-pin"></i></div>
+          <div>
+            <h4>Branch Office</h4>
+            <p>Shop No. 18, Mumbai, Malad West,<br/>
+                Innas Wadi – 400095</p>
+          </div>
+        </div>
+
+        <div class="contact-item clickable" onclick="makeCall()">
+          <div class="ci-icon green"><i class="fas fa-phone-alt"></i></div>
+          <div>
+            <h4>Phone / Emergency</h4>
+            <p>+91 73049  4919<br/>+91 96532  81613</p>
+          </div>
+        </div>
+        <div class="contact-item clickable" onclick="openWhatsApp()">
+          <div class="ci-icon wa"><i class="fab fa-whatsapp"></i></div>
+          <div>
+            <h4>WhatsApp</h4>
+            <p>+91 96532  81613<br/>Reports & Quick Queries</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <h4>Email</h4>
+            <p>info@shreenathjipathlabs.com<br/>reports@shreenathjipathlabs.com</p>
+          </div>
+        </div>
+        <div class="cta-row">
+
+          <button class="btn-wa btn-lg" onclick="openWhatsApp()">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </button>
+          
+          <button class="btn-call btn-lg" onclick="makeCall()">
+            <i class="fas fa-phone"></i> Call Now
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer class="footer">
+  <div class="footer-top container">
+    <div class="footer-brand">
+      <div class="logo-icon"><i class="fas fa-microscope"></i></div>
+      <div>
+        <span class="brand-main">Shreenathji</span>
+        <span class="brand-sub">Path Labs</span>
+      </div>
+      <p>Trusted diagnostics for a healthier community since 2021.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" onclick="openWhatsApp()"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#appointment">Book Test</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Tests</h4>
+      <ul>
+        <li><a href="#appointment">Complete Blood Count</a></li>
+        <li><a href="#appointment">Thyroid Profile</a></li>
+        <li><a href="#appointment">Lipid Profile</a></li>
+        <li><a href="#appointment">Liver Function Test</a></li>
+        <li><a href="#appointment">Full Body Checkup</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <ul class="hours-list">
+        <li><span>Mon – Sun</span><span>24/7</span></li>
+        <li><span>Saturday</span><span>Anytime/Day & Night</span></li>
+        <li><span>Sunday</span><span>24/7</span></li>
+        <li class="emergency"><span>Emergency</span><span>24 / 7</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Shreenathji Path Labs. All rights reserved.</p>
+    <p>NABL Accredited · ISO 9001:2015 · Reg. No. MH/PATH/2024/0012</p>
+  </div>
+</footer>
+
+
+
+<div class="fab-group">
+  <button class="fab fab-wa" onclick="openWhatsApp()" title="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </button>
+  <button class="fab fab-call" onclick="makeCall()" title="Call">
+    <i class="fas fa-phone-alt"></i>
+  </button>
+</div>
+<a class="back-top" id="backTop" href="#home" title="Back to top">
+  <i class="fas fa-chevron-up"></i>
+</a>
+
+
+<div class="modal-overlay" id="loginModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('loginModal')"><i class="fas fa-times"></i></button>
+    <div class="modal-logo"><i class="fas fa-microscope"></i></div>
+    <h2>Welcome Back</h2>
+
+    <p class="modal-sub">Login to your patient account</p>
+
+    <div class="form-group">
+      <label>Mobile / Email</label>
+
+      <input type="text" id="loginId" placeholder="Your mobile or email"/>
+    </div>
+
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" id="loginPass" placeholder="Password"/>
+    </div>
+
+    <button class="btn-primary btn-block" onclick="loginUser()">
+      <i class="fas fa-sign-in-alt"></i> Login
+    </button>
+
+    <p class="modal-switch">New here?
+       <a href="#" onclick="switchModal('loginModal','signupModal')">Create account</a></p>
+  </div>
+</div>
+
+
+                  <!-- SIGNUP -->
+
+<div class="modal-overlay" id="signupModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('signupModal')"><i class="fas fa-times"></i></button>
+    <div class="modal-logo"><i class="fas fa-microscope"></i></div>
+    <h2>Create Account</h2>
+    <p class="modal-sub">Join Shreenathji Path Labs Patient Portal</p>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Full Name *</label>
+        <input type="text" id="suName" placeholder="Your full name"/>
+      </div>
+
+      <div class="form-group">
+        <label>Age</label>
+        <input type="number" id="suAge" placeholder="Age"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Mobile Number *</label>
+      <input type="tel" id="suPhone" placeholder="+91 XXXXX XXXXX"/>
+    </div>
+
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" id="suEmail" placeholder="email@example.com"/>
+    </div>
+
+    <div class="form-group">
+      <label>Password *</label>
+      <input type="password" id="suPass" placeholder="Create password (min 6 chars)"/>
+    </div>
+
+    <button class="btn-primary btn-block" onclick="signupUser()">
+      <i class="fas fa-user-plus"></i> Create Account
+    </button>
+
+    <p class="modal-switch">Already registered? 
+      <a href="#" onclick="switchModal('signupModal','loginModal')">Login</a></p>
+  </div>
+</div>
+
+
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
