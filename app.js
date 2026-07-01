@@ -1,6 +1,6 @@
 
 const LAB_PHONE   = '+917304949191';
-const LAB_WA_NUM  = '919653281613';
+const LAB_WA_NUM  = '917304949191';
 const LAB_NAME    = 'Shreenathji Path Labs';
 
  
@@ -368,19 +368,19 @@ function shareViaWhatsApp(appt) {
 
 
 function openWhatsApp() {
-  const phoneNumber = "919653281613";
+  const phoneNumber = "917304949191";
   const msg = `Hello ${LAB_NAME}! I'd like to inquire about diagnostic tests and appointments.`;
   window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(msg)}`, '_blank');
 }
 
 
 function makeCall() {
-  const phoneNumber = "+919653281613";
+  const phoneNumber = "+917304949191";
   window.location.href = `tel:${phoneNumber}`;
 }
 
 
-/* ── NAVBAR SCROLL ────────────────────────────────────── */
+
 
 const navbar  = document.getElementById('navbar');
 const backTop = document.getElementById('backTop');
