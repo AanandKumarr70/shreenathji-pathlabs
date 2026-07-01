@@ -559,7 +559,7 @@ window.addEventListener('DOMContentLoaded', () => {
       if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
     });
     navLinks.forEach(a => {
-      a.style.color = a.getAttribute('href') === `#${current}` ? 'var(--accent)' : '';
+      a.style.color = a.getAttribute('href') === `#${current}` ? 'var(--accent)' : '';  
     });
   });
 });
