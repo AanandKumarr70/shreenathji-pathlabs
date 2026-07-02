@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shreenathji Pathology Laboratory</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f8ff;
+overflow-x:hidden;
+}
+
+
+
+body::before{
+content:'';
+position:fixed;
+width:500px;
+height:500px;
+background:linear-gradient(#0f65ff,#4ca4ff);
+border-radius:50%;
+top:-200px;
+left:-150px;
+filter:blur(120px);
+opacity:.3;
+animation:movebg 10s infinite alternate;
+z-index:-1;
+}
+
+body::after{
+content:'';
+position:fixed;
+width:400px;
+height:400px;
+background:#00d4ff;
+border-radius:50%;
+bottom:-150px;
+right:-100px;
+filter:blur(120px);
+opacity:.2;
+animation:movebg2 8s infinite alternate;
+z-index:-1;
+}
+
+@keyframes movebg{
+
+100%{
+transform:
+translate(100px,100px);
+}
+
+}
+
+@keyframes movebg2{
+
+100%{
+transform:
+translate(-100px,-100px);
+}
+
+}
+
+
+
+.top-bar{
+
+background:#0047ab;
+color:white;
+display:flex;
+justify-content:space-between;
+padding:12px 50px;
+font-size:14px;
+align-items:center;
+
+}
+
+.top-left span{
+
+margin-right:20px;
+
+}
+
+.top-right a{
+
+color:white;
+margin-left:15px;
+font-size:20px;
+transition:.5s;
+
+}
+
+.top-right a:hover{
+
+color:#00e0ff;
+transform:rotate(360deg);
+
+}
+
+
+
+nav{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+background:white;
+box-shadow:0 3px 20px rgba(0,0,0,.1);
+
+position:sticky;
+top:0;
+z-index:999;
+
+}
+
+.logo h2{
+
+color:#0052cc;
+
+}
+
+.logo p{
+
+font-size:13px;
+
+}
+
+nav ul{
+
+display:flex;
+list-style:none;
+
+}
+
+nav ul li{
+
+margin:0 14px;
+
+}
+
+nav ul li a{
+
+text-decoration:none;
+font-weight:600;
+color:#222;
+position:relative;
+
+}
+
+nav ul li a::after{
+
+content:'';
+position:absolute;
+width:0;
+height:3px;
+background:#0052cc;
+bottom:-5px;
+left:0;
+transition:.4s;
+
+}
+
+nav ul li a:hover::after{
+
+width:100%;
+
+}
+
+
+
+
+button{
+
+background:linear-gradient(
+45deg,
+#0052cc,
+#008cff
+);
+
+color:white;
+border:none;
+padding:14px 25px;
+border-radius:30px;
+cursor:pointer;
+font-weight:600;
+transition:.5s;
+overflow:hidden;
+position:relative;
+
+}
+
+button:hover{
+
+transform:translateY(-6px);
+box-shadow:0 10px 30px rgba(0,0,255,.3);
+
+}
+
+
+
+
+.hero{
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:90px;
+min-height:90vh;
+
+}
+
+.hero-content{
+
+width:50%;
+animation:slideLeft 1s;
+
+}
+
+.hero-content h1{
+
+font-size:65px;
+line-height:80px;
+
+}
+
+.hero-content span{
+
+color:#0052cc;
+
+}
+
+.hero-content p{
+
+margin:30px 0;
+font-size:18px;
+color:#666;
+
+}
+
+.hero-img{
+
+width:45%;
+animation:float 4s infinite;
+
+}
+
+.hero-img img{
+
+width:100%;
+border-radius:30px;
+box-shadow:0 15px 40px rgba(0,0,0,.2);
+
+}
+
+@keyframes float{
+
+50%{
+
+transform:
+translateY(-25px);
+
+}
+
+}
+
+
+@keyframes slideLeft{
+
+from{
+
+opacity:0;
+transform:
+translateX(-100px);
+
+}
+
+to{
+
+opacity:1;
+transform:
+translateX(0);
+
+}
+
+}
+
+
+
+
+.services{
+
+padding:100px 50px;
+text-align:center;
+
+}
+
+.services h2{
+
+font-size:35px;
+margin-bottom:60px;
+color:#0052cc;
+
+}
+
+.service-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+
+.card{
+
+background:rgba(255,255,255,.7);
+
+backdrop-filter:blur(10px);
+
+padding:40px;
+
+border-radius:20px;
+
+transition:.5s;
+
+box-shadow:0 5px 30px rgba(0,0,0,.08);
+
+}
+
+
+.card i{
+
+font-size:50px;
+color:#0052cc;
+margin-bottom:20px;
+
+}
+
+
+.card:hover{
+
+transform:
+translateY(-15px)
+scale(1.05);
+
+background:#0052cc;
+color:white;
+
+}
+
+.card:hover i{
+
+color:white;
+
+}
+
+
+
+
+.packages{
+
+padding:100px 50px;
+
+text-align:center;
+
+}
+
+.packages h2{
+
+font-size:35px;
+margin-bottom:60px;
+color:#0052cc;
+
+}
+
+.package-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+.package-card{
+
+background:white;
+overflow:hidden;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+transition:.5s;
+
+}
+
+.package-card img{
+
+width:100%;
+height:220px;
+object-fit:cover;
+transition:.5s;
+
+}
+
+.package-card:hover img{
+
+transform:scale(1.1);
+
+}
+
+.package-card h3{
+
+padding:15px;
+
+color:#0052cc;
+
+}
+
+.package-card ul{
+
+padding:15px;
+list-style:none;
+
+}
+
+.package-card li{
+
+padding:7px;
+
+}
+
+.package-card:hover{
+
+transform:
+translateY(-15px);
+
+}
+
+
+
+
+footer{
+
+background:#0047ab;
+color:white;
+display:flex;
+justify-content:space-around;
+padding:50px;
+margin-top:100px;
+
+}
+
+footer iframe{
+
+width:400px;
+height:200px;
+border-radius:20px;
+border:none;
+
+}
+
+
+
+
+.whatsapp{
+
+position:fixed;
+right:30px;
+bottom:30px;
+
+width:70px;
+height:70px;
+
+background:#25d366;
+border-radius:50%;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:35px;
+color:white;
+text-decoration:none;
+
+animation:pulse 2s infinite;
+
+box-shadow:
+0 0 30px
+#25d366;
+
+}
+
+@keyframes pulse{
+
+50%{
+
+transform:
+scale(1.2);
+
+}
+
+}
+
+
+
+
+@media(max-width:900px){
+
+.hero{
+
+flex-direction:column;
+padding:50px;
+
+}
+
+.hero-content{
+
+width:100%;
+text-align:center;
+
+}
+
+.hero-img{
+
+width:100%;
+margin-top:40px;
+
+}
+
+nav{
+
+flex-direction:column;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+justify-content:center;
+margin:20px 0;
+
+}
+
+footer{
+
+flex-direction:column;
+gap:30px;
+
+}
+
+footer iframe{
+
+width:100%;
+
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="top-bar">
+
+<div class="top-left">
+
+<span><i class="fa-solid fa-clock"></i> 24/7 Service</span>
+
+<span><i class="fa-solid fa-file-medical"></i> Accurate Reports</span>
+
+<span><i class="fa-solid fa-house"></i> Home Collection</span>
+
+</div>
+
+<div class="top-right">
+
+<a href="https://facebook.com/shreenathjipathologylaboratory" target="_blank" style="text-decoration: none;" >
+   <i class="fab fa-facebook"></i>
+</a>
+
+<a href="https://instagram.com/shreenathji400095" target="_blank" style="text-decoration: none;">
+   <i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://wa.me/917304949191" target="_blank" style="text-decoration: none;">
+   <i class="fab fa-whatsapp"></i>
+</a>
+
+<span>📞7304949191</span>
+
+</div>
+
+</div>
+
+
+
+<nav>
+
+<div class="logo">
+
+<h2>SHREENATHJI</h2>
+
+<p>PATHOLOGY LABORATORY</p>
+
+</div>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#">About</a></li>
+
+<li><a href="#">Services</a></li>
+
+<li><a href="#">Test Packages</a></li>
+
+<li><a href="#">Home Collection</a></li>
+
+<li><a href="#">Gallery</a></li>
+
+<li><a href="#">Contact</a></li>
+
+</ul>
+
+<button>Book Test Now</button>
+
+</nav>
+
+
+
+
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+
+Accurate Tests.
+
+<span>Trusted Results.</span>
+
+</h1>
+
+<p>
+
+Advanced Technology. Expert Care.
+
+Blood Test • Home Collection • ECG At Home
+
+</p>
+
+<button>Book Test Now</button>
+
+<button class="btn2">
+
+<i class="fab fa-whatsapp"></i>
+
+Whatsapp Us
+
+</button>
+
+</div>
+
+<div class="hero-img">
+
+<img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=1200">
+
+</div>
+
+</section>
+
+
+
+
+
+<section class="services">
+
+<h2>OUR SERVICES</h2>
+
+<div class="service-grid">
+
+
+<div class="card">
+
+<i class="fa-solid fa-droplet"></i>
+
+<h3>Blood Tests</h3>
+
+<p>All blood tests available</p>
+
+</div>
+
+
+<div class="card">
+
+<i class="fa-solid fa-heart-pulse"></i>
+
+<h3>ECG At Home</h3>
+
+<p>ECG service at home</p>
+
+</div>
+
+
+<div class="card">
+
+<i class="fa-solid fa-house"></i>
+
+<h3>Home Collection</h3>
+
+<p>Sample collection at home</p>
+
+</div>
+
+
+<div class="card">
+
+<i class="fa-solid fa-microscope"></i>
+
+<h3>Specialized Tests</h3>
+
+<p>Advanced tests available</p>
+
+</div>
+
+
+<div class="card">
+
+<i class="fa-solid fa-stethoscope"></i>
+
+<h3>Health Checkup</h3>
+
+<p>Full body packages</p>
+
+</div>
+
+
+<div class="card">
+
+<i class="fa-solid fa-file"></i>
+
+<h3>Digital Reports</h3>
+
+<p>Download reports easily</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+<section class="packages">
+
+<h2>POPULAR TEST PACKAGE</h2>
+
+<div class="package-grid">
+
+
+<div class="package-card">
+
+<img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118">
+
+<h3>FEVER PANEL</h3>
+
+<ul>
+
+<li>CBC</li>
+
+<li>ESR</li>
+
+<li>Malaria</li>
+
+<li>LFT</li>
+
+</ul>
+
+<button>View Details</button>
+
+</div>
+
+
+
+<div class="package-card">
+
+<img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528">
+
+<h3>DIABETES PROFILE</h3>
+
+<ul>
+
+<li>Fasting Sugar</li>
+
+<li>PP Blood Sugar</li>
+
+<li>HbA1C</li>
+
+</ul>
+
+<button>View Details</button>
+
+</div>
+
+
+
+<div class="package-card">
+
+<img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69">
+
+<h3>FULL BODY CHECKUP</h3>
+
+<ul>
+
+<li>CBC</li>
+
+<li>Liver Test</li>
+
+<li>Kidney Test</li>
+
+<li>Thyroid</li>
+
+</ul>
+
+<button>View Details</button>
+
+</div>
+
+
+
+<div class="package-card">
+
+<img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b">
+
+<h3>PREGNANCY PROFILE</h3>
+
+<ul>
+
+<li>CBC</li>
+
+<li>Blood Group</li>
+
+<li>Urine Test</li>
+
+</ul>
+
+<button>View Details</button>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+<footer>
+
+<div>
+
+<h3>Contact Us</h3>
+
+<p>Shop No.18, Innas Wadi Market, Mumbai</p>
+
+<p>📞7304949191</p>
+
+<p>✉ shreenathjipathlabs@gmail.com</p>
+
+</div>
+
+
+<div>
+
+<h3>Location</h3>
+
+<iframe src="https://maps.google.com/maps?q=Mumbai&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+
+</div>
+
+
+</footer>
+
+
+
+<a href="https://wa.me/917304949191" target="_blank" class="whatsapp">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+
+
+<script>
+
+
+
+window.addEventListener("load",()=>{
+
+document.body.style.opacity="1";
+
+});
+
+document.body.style.opacity="0";
+document.body.style.transition="1s";
+
+
+
+
+window.addEventListener("scroll",()=>{
+
+const nav=document.querySelector("nav");
+
+if(window.scrollY>50){
+
+nav.style.background="#ffffff";
+nav.style.boxShadow=
+"0 10px 30px rgba(0,0,0,.1)";
+
+nav.style.padding="15px 60px";
+
+}
+
+else{
+
+nav.style.boxShadow="none";
+
+nav.style.padding="18px 60px";
+
+}
+
+});
+
+
+
+
+document.querySelectorAll(
+'nav ul li a'
+).forEach(link=>{
+
+link.addEventListener(
+'click',
+function(e){
+
+e.preventDefault();
+
+let target=
+document.querySelector(
+this.getAttribute("href")
+);
+
+if(target){
+
+target.scrollIntoView({
+
+behavior:'smooth'
+
+});
+
+}
+
+});
+
+});
+
+
+
+
+
+const observer=
+new IntersectionObserver(
+
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add(
+"show"
+);
+
+}
+
+});
+
+},
+
+{
+
+threshold:.2
+
+}
+
+);
+
+
+const hiddenElements=
+
+document.querySelectorAll(
+
+'.card,.package-card,.hero-content,.hero-img'
+
+);
+
+hiddenElements.forEach(el=>{
+
+el.classList.add("hidden");
+
+observer.observe(el);
+
+});
+
+
+
+
+
+const counters=
+document.querySelectorAll(
+".count"
+);
+
+counters.forEach(counter=>{
+
+counter.innerText="0";
+
+const updateCounter=()=>{
+
+const target=
++counter.getAttribute(
+"data-target"
+);
+
+const c=
++counter.innerText;
+
+const increment=
+target/100;
+
+if(c<target){
+
+counter.innerText=
+`${Math.ceil(
+c+increment
+)}`;
+
+setTimeout(
+updateCounter,
+20
+);
+
+}
+
+else{
+
+counter.innerText=
+target;
+
+}
+
+}
+
+updateCounter();
+
+});
+
+
+
+
+const buttons=
+document.querySelectorAll(
+"button"
+);
+
+buttons.forEach(btn=>{
+
+btn.addEventListener(
+"click",
+function(e){
+
+let x=
+e.clientX-
+e.target.offsetLeft;
+
+let y=
+e.clientY-
+e.target.offsetTop;
+
+
+let ripple=
+document.createElement(
+"span"
+);
+
+ripple.style.left=
+x+"px";
+
+ripple.style.top=
+y+"px";
+
+ripple.classList.add(
+"ripple"
+);
+
+this.appendChild(
+ripple
+);
+
+setTimeout(()=>{
+
+ripple.remove();
+
+},600);
+
+});
+
+});
+
+
+
+
+
+const text=
+"Advanced Technology • Expert Care • Accurate Reports";
+
+let i=0;
+
+function typing(){
+
+if(i<text.length){
+
+document.querySelector(
+".hero-content p"
+).innerHTML +=
+text.charAt(i);
+
+i++;
+
+setTimeout(
+typing,
+60
+);
+
+}
+
+}
+
+document.querySelector(
+".hero-content p"
+).innerHTML="";
+
+typing();
+
+
+
+
+
+document.addEventListener(
+"mousemove",
+(e)=>{
+
+let x=
+e.clientX/50;
+
+let y=
+e.clientY/50;
+
+document.querySelector(
+".hero-img"
+).style.transform=
+
+`translate(${x}px,${y}px)`;
+
+});
+
+
+
+
+
+console.log(
+
+"%c SHREENATHJI PATHOLOGY WEBSITE LOADED",
+
+"color:blue;font-size:18px;font-weight:bold"
+
+);
+
+</script>
+
+</body>
+</html>

@@ -1421,3 +1421,59 @@ top: 17px;
     padding: 28px 20px;
  }
 }
+
+
+
+.booking-h{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:12px 25px;
+font-size:16px;
+font-weight:600;
+margin: 20px;
+background:linear-gradient(45deg,#0052cc,#00aaff);
+color:white;
+
+border:none;
+border-radius:50px;
+
+display: flex;
+margin-left: auto;
+word-spacing: 5px;
+
+cursor:pointer;
+text-decoration:none;
+
+transition:all .4s ease;
+
+width:auto;
+min-width:160px;
+max-width:100%;
+}
+
+
+/* Hover Effect */
+
+.booking-h:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,82,204,.3);
+}
+
+
+/* Mobile Responsive */
+
+@media(max-width:768px){
+
+.booking-h{
+
+width:90%;
+font-size:14px;
+padding:14px 20px;
+margin:auto;
+display:flex;
+
+}
+
+}
