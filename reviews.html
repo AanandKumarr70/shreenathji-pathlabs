@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Reviews - Shreenathji Pathology Laboratory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        :root {
+            --medical-teal: #0d9488;
+            --medical-teal-dark: #0f766e;
+            --medical-green: #10b981;
+            --medical-blue: #0284c7;
+            --bg-gradient: linear-gradient(135deg, #ecfeff 0%, #f0fdfa 50%, #ecfeff 100%);
+            --card-bg: #ffffff;
+            --text-dark: #134e4a;
+            --text-gray: #475569;
+            --star: #fbbf24;
+            --border-light: #99f6e4;
+            --whatsapp: #25D366;
+            --google-blue: #4285F4;
+            --google-red: #DB4437;
+            --google-yellow: #F4B400;
+            --google-green: #0F9D58;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: var(--bg-gradient);
+            padding: 24px 16px;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+.spl-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        
+        
+.medical-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            background-image: 
+                radial-gradient(circle at 20% 50%, var(--medical-teal) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, var(--medical-green) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+            animation: patternPulse 8s ease-in-out infinite;
+        }
+
+        @keyframes patternPulse {
+            0%, 100% { opacity: 0.03; }
+            50% { opacity: 0.06; }
+        }
+
+.spl-header {
+            text-align: left;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        
+
+.google-icon-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+.google-icon-link:hover {
+            transform: scale(1.05);
+        }
+
+.google-icon-header {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            animation: googleRotate 3s ease-in-out infinite;
+            filter: drop-shadow(0 2px 8px rgba(13, 148, 136, 0.3));
+        }
+
+        @keyframes googleRotate {
+            0%, 100% { transform: rotate(0deg) scale(1); }
+            25% { transform: rotate(-10deg) scale(1.1); }
+            75% { transform: rotate(10deg) scale(1.1); }
+        }
+
+.spl-header h1 {
+            font-size: 1.6rem;
+            color: var(--medical-teal-dark);
+            font-weight: 500;
+            background: linear-gradient(135deg, var(--medical-teal-dark), var(--medical-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+.spl-counter {
+            margin-left: auto;
+            background: linear-gradient(135deg, var(--medical-teal), var(--medical-green));
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+        }
+
+        
+.spl-slider-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            perspective: 1000px;
+            z-index: 1;
+        }
+
+.spl-slider {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+.spl-slide {
+            min-width: 100%;
+            padding: 0 8px;
+        }
+
+        
+.spl-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 28px;
+            border: 2px solid var(--border-light);
+            min-height: 380px;
+            position: relative;
+            box-shadow: 
+                0 4px 20px rgba(13, 148, 136, 0.08),
+                0 1px 3px rgba(0, 0, 0, 0.05);
+            animation: cardEntry 0.8s ease-out;
+            transform-style: preserve-3d;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+.spl-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 
+                0 12px 32px rgba(13, 148, 136, 0.15),
+                0 4px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        @keyframes cardEntry {
+            0% { 
+                opacity: 0; 
+                transform: rotateX(-20deg) translateY(50px);
+            }
+            100% { 
+                opacity: 1; 
+                transform: rotateX(0deg) translateY(0);
+            }
+        }
+
+        
+
+.spl-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, 
+                var(--medical-teal) 0%, 
+                var(--medical-green) 25%, 
+                var(--medical-blue) 50%, 
+                var(--medical-green) 75%, 
+                var(--medical-teal) 100%);
+            background-size: 200% 100%;
+            animation: borderFlow 4s linear infinite;
+            border-radius: 20px 20px 0 0;
+        }
+
+        @keyframes borderFlow {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 200% 0%; }
+        }
+
+.spl-user {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+            position: relative;
+            z-index: 1;
+        }
+
+.spl-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--medical-teal), var(--medical-green));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+            border: 3px solid white;
+        }
+
+.spl-user-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+
+.spl-user-meta {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin-top: 2px;
+        }
+
+.spl-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 14px;
+            position: relative;
+            z-index: 1;
+        }
+
+.spl-stars {
+            color: var(--star);
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            filter: drop-shadow(0 2px 4px rgba(251, 191, 36, 0.4));
+        }
+
+.spl-stars span {
+            display: inline-block;
+            animation: starPop 0.4s ease-out backwards;
+        }
+
+.spl-stars span:nth-child(1) { animation-delay: 0.1s; }
+.spl-stars span:nth-child(2) { animation-delay: 0.2s; }
+.spl-stars span:nth-child(3) { animation-delay: 0.3s; }
+.spl-stars span:nth-child(4) { animation-delay: 0.4s; }
+.spl-stars span:nth-child(5) { animation-delay: 0.5s; }
+
+        @keyframes starPop {
+            0% { transform: scale(0) rotate(-180deg); opacity: 0; }
+            100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+
+.spl-time {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+        }
+
+.spl-text {
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            white-space: pre-line;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 16px;
+        }
+
+       
+.spl-review-img {
+            width: 100%;
+            max-height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-top: 12px;
+            border: 2px solid var(--border-light);
+            box-shadow: 0 4px 16px rgba(13, 148, 136, 0.15);
+        }
+
+        
+.spl-progress {
+            width: 100%;
+            height: 4px;
+            background: rgba(13, 148, 136, 0.1);
+            border-radius: 2px;
+            margin-top: 20px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+.spl-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--medical-teal), var(--medical-green));
+            width: 0%;
+            transition: width 0.1s linear;
+            box-shadow: 0 0 10px rgba(13, 148, 136, 0.5);
+        }
+
+        
+
+.floating-buttons {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            z-index: 1000;
+        }
+
+        
+
+.google-float {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(13, 148, 136, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            animation: googlePulse 2s infinite;
+            border: 3px solid var(--border-light);
+            font-size: 32px;
+            color: var(--google-blue);
+        }
+
+.google-float:hover {
+            transform: scale(1.15) rotate(10deg);
+            box-shadow: 0 6px 30px rgba(13, 148, 136, 0.6);
+        }
+
+        @keyframes googlePulse {
+            0%, 100% { box-shadow: 0 4px 20px rgba(13, 148, 136, 0.4); }
+            50% { box-shadow: 0 4px 30px rgba(13, 148, 136, 0.7); }
+        }
+
+        
+
+.whatsapp-float {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            animation: whatsappPulse 2s infinite;
+        }
+
+.whatsapp-float:hover {
+            transform: scale(1.15) rotate(10deg);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        @keyframes whatsappPulse {
+            0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7); }
+        }
+
+        @media (max-width: 768px) {
+.spl-header h1 { font-size: 1.3rem; }
+.spl-card { padding: 24px; min-height: 440px; }
+.spl-counter { font-size: 0.8rem; padding: 4px 10px; }
+.google-float,.whatsapp-float { width: 56px; height: 56px; }
+.google-float { font-size: 28px; }
+.whatsapp-float { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="medical-pattern"></div>
+
+    <div class="spl-container">
+        <div class="spl-header">
+            <a href="https://www.google.com/search?q=Shreenathji+Pathology+Laboratory+Malad+West+reviews" target="_blank" class="google-icon-link">
+                <div class="google-icon-header">
+                    <i class="fab fa-google" style="color: var(--google-blue);"></i>
+                </div>
+                <h1>Google Reviews</h1>
+            </a>
+            <div class="spl-counter" id="reviewCounter">1 / 20</div>
+        </div>
+        
+        <div class="spl-slider-wrapper">
+            <div class="spl-slider" id="spl-slider"></div>
+        </div>
+        
+        <div class="spl-progress">
+            <div class="spl-progress-bar" id="progressBar"></div>
+        </div>
+    </div>
+
+    
+
+    <div class="floating-buttons">
+        <a href="https://www.google.com/search?q=Shreenathji+Pathology+Laboratory+Malad+West+reviews" class="google-float" target="_blank">
+            <i class="fab fa-google"></i>
+        </a>
+        <a href="https://wa.me/+91734949191?text=Hi,%20I%20want%20to%20book%20a%20test" class="whatsapp-float" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+
+    <script>
+        const patientReviews = [
+
+            {
+                name: "Farha Hashmi",
+                count: "2 reviews",
+                rating: 5,
+                time: "3 months ago",
+                text: `had a very good experience with Shreenathji Pathology Laboratory. They provide excellent home visit sample collection service, which is very helpful for elderly patients and busy people. The staff was very polite, professional and arrived exactly on time at my home. The sample collection process was very hygienic and painless. I really liked that they follow proper medical safety protocols. Their prices are also very affordable compared to other labs, which makes quality testing accessible for everyone.
+Another great thing is that they provide NABL standard reports, so the accuracy and reliability of the test results can be trusted. I received my reports very fast – within 6 hours only, which is very impressive. They also provide home delivery of reports, so there is no need to visit the lab again.
+Overall, I highly recommend Shreenathji Pathology Laboratory for anyone looking for accurate reports, affordable prices, fast service and convenient home sample collection. Truly one of the best pathology services`
+            },
+            {
+                name: "Sanjana Gupta",
+                count: "1 review",
+                rating: 5,
+                time: "4 months ago",
+                text: `recently visited Shreenathji Pathology Laboratory in Malad, Mumbai for a comprehensive full-body health checkup, and here's my honest experience:
+
+The overall service was excellent. The staff was very polite, professional, and cooperative. Sample collection was smooth and almost painless. The centre is clean and hygienic, and proper safety protocols are maintained.
+
+Reports were delivered on time and clearly explained. The best part is that samples are processed at NABL certified laboratories, which ensures accurate and reliable reports.
+
+Most importantly, the pricing is very affordable compared to other diagnostic centres in the area. Highly recommended for anyone looking for quality testing at a reasonable price in Malad.`
+            },
+            {
+                name: "Manu",
+                count: "1 review",
+                rating: 5,
+                time: "Edited 6 months ago",
+                text: `Excellent service and accurate reports. The staff is very polite and cooperative. Reports are delivered on time, and the lab maintains proper hygiene and cleanliness. Prices are reasonable. Highly recommended pathology centre`
+            },
+            {
+                name: "Savio d'cruz",
+                count: "6 reviews",
+                rating: 5,
+                time: "2 months ago",
+                text: `Pankaj gives good information about the test we want to do, he is polite and professional, reports are also on time, this lab is really good as it is 24 hrs open...`
+            },
+            {
+                name: "Ruwab ali Sayyed",
+                count: "2 reviews",
+                rating: 5,
+                time: "3 months ago",
+                text: `Center visit and affordable price market 60% lease price malad west
+
+Best service`
+            },
+            {
+                name: "Sanjana Singh",
+                count: "1 review",
+                rating: 5,
+                time: "2 months ago",
+                text: `Nice service with affordable price..`
+            },
+            {
+                name: "Vinay Tiwari (LABSTATION)",
+                count: "4 reviews · 1 photo",
+                rating: 5,
+                time: "3 months ago",
+                text: `Very good service, & report quality.`
+            },
+            {
+                name: "Divya P",
+                count: "2 reviews",
+                rating: 5,
+                time: "2 months ago",
+                text: `Very good service....quick report delivery....`
+            },
+            {
+                name: "Laxmi Singe",
+                count: "2 reviews",
+                rating: 4,
+                time: "7 months ago",
+                text: `On committed time person came my home for blood sample collection. I received report also on time." Good service`
+            },
+        
+
+            {
+                name: "Albina Khan",
+                count: "1 review",
+                rating: 5,
+                time: "a year ago",
+                text: `Excellent service provided by shreenathji pathology (Pankaj upadhyay)very punctual would like to recommend for friends and family.`
+            },
+            {
+                name: "Sudhanshu Patil",
+                count: "4 reviews",
+                rating: 5,
+                time: "11 months ago",
+                text: `Good staff and communication. They came home and were very cooperative.`
+            },
+            {
+                name: "Mahesh Dait",
+                count: "32 reviews · 49 photos",
+                rating: 5,
+                time: "Edited 6 months ago",
+                text: `Booked a blood test at home and the experience was excellent. The technician arrived on time, followed proper hygiene, and the sample collection was painless. Reports were accurate and received quickly on WhatsApp. Very convenient and reliable service. Highly recommended for home blood tests in Malad Mumbai`
+            },
+            {
+                name: "Sneha Bhat",
+                count: "2 reviews",
+                rating: 5,
+                time: "a month ago",
+                text: `Smooth service experience at home`
+            },
+            {
+                name: "SHRIHARI PARLE",
+                count: "1 review · 1 photo",
+                rating: 5,
+                time: "a year ago",
+                text: `nice experience.....the home service is time punctual..... reasonable charges.....polite behaviour...... detailed test reports`
+            },
+            {
+                name: "Tanu Singh",
+                count: "1 review",
+                rating: 5,
+                time: "11 months ago",
+                text: `Good service for staff very help full thanku`
+            },
+            {
+                name: "sujith shetty",
+                count: "4 reviews",
+                rating: 5,
+                time: "a year ago",
+                text: `I have visited the place when i need my blood test report urgently and they provided it. They provide good services. I am really happy with them`
+            },
+            {
+                name: "Rohan Itkar",
+                count: "1 review",
+                rating: 5,
+                time: "6 months ago",
+                text: `Center visit and affordable price best service`
+            },
+            {
+                name: "dilip chudnaik",
+                count: "7 reviews",
+                rating: 5,
+                time: "2 months ago",
+                text: `Very prompt service with personal tuch`
+            },
+            // NEW 2 REVIEWS
+            {
+                name: "Pankaj Gaur",
+                count: "1 review · 1 photo",
+                rating: 5,
+                time: "3 years ago",
+                text: `Navi Mumbai international airport Camp better service for Pankaj Company L&T good`,
+                image: "https://i.imgur.com/8QZq3lP.jpg"
+            },
+            {
+                name: "Ajit Indulkar",
+                count: "Local Guide · 120 reviews · 1236 photos",
+                rating: 5,
+                time: "a year ago",
+                text: `Very good service and prompt response on queries. Staff was friendly and helpful, sample collection was done with all the precautions and safety. Prices were reasonable too.`
+            }
+        ];
+
+        const slider = document.getElementById('spl-slider');
+        const progressBar = document.getElementById('progressBar');
+        const reviewCounter = document.getElementById('reviewCounter');
+        
+        let currentIndex = 0;
+        const slideDuration = 3000;
+        let startTime;
+        let animationFrame;
+
+        function getInitials(name) {
+            return name.split(' ')[0][0].toUpperCase();
+        }
+
+
+        function renderStars(count) {
+            let stars = '';
+            for(let i = 0; i < 5; i++) {
+                stars += `<span>${i < count? '★' : '☆'}</span>`;
+            }
+            return stars;
+        }
+
+        
+
+        patientReviews.forEach(review => {
+            const slide = document.createElement('div');
+            slide.className = 'spl-slide';
+            let imageHTML = review.image? `<img src="${review.image}" alt="Review Photo" class="spl-review-img">` : '';
+            slide.innerHTML = `
+                <div class="spl-card">
+                    <div class="spl-user">
+                        <div class="spl-avatar">${getInitials(review.name)}</div>
+                        <div>
+                            <div class="spl-user-name">${review.name}</div>
+                            <div class="spl-user-meta">${review.count}</div>
+                        </div>
+                    </div>
+                    <div class="spl-rating">
+                        <div class="spl-stars">${renderStars(review.rating)}</div>
+                        <div class="spl-time">${review.time}</div>
+                    </div>
+                    <div class="spl-text">${review.text}</div>
+                    ${imageHTML}
+                </div>
+            `;
+            slider.appendChild(slide);
+        });
+
+
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            reviewCounter.textContent = `${currentIndex + 1} / ${patientReviews.length}`;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % patientReviews.length;
+            updateSlider();
+            startProgress();
+        }
+
+        function startProgress() {
+            startTime = Date.now();
+            cancelAnimationFrame(animationFrame);
+            updateProgress();
+        }
+
+        function updateProgress() {
+            const elapsed = Date.now() - startTime;
+            const progress = Math.min(elapsed / slideDuration * 100, 100);
+            progressBar.style.width = progress + '%';
+            
+            if (progress < 100) {
+                animationFrame = requestAnimationFrame(updateProgress);
+            } else {
+                nextSlide();
+            }
+        }
+
+
+        
+        updateSlider();
+        startProgress();
+
+
+        slider.addEventListener('mouseenter', () => cancelAnimationFrame(animationFrame));
+        slider.addEventListener('mouseleave', () => startProgress());
+    </script>
+</body>
+</html>

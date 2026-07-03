@@ -1475,3 +1475,26 @@ display:flex;
 }
 
 }
+
+.more-rev{
+  display: flex;
+  text-decoration: none;
+  margin: 30px;
+  color: white;
+  margin-left: 40px;
+  font-size: medium;
+  font-family: serif;
+  border: 1px solid rgba(9, 0, 129, 0.676);
+  padding: 10px 20px;
+  border-radius: 15px;
+  background-color: #000560b7;
+  box-shadow: 0 0 10px rgb(0, 2, 136);
+}
+.click-h{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 120px;
+  word-spacing: 10px;
+  font-size: large;
+}
