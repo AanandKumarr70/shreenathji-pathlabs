@@ -1432,7 +1432,7 @@ justify-content:center;
 padding:12px 25px;
 font-size:16px;
 font-weight:600;
-margin: 20px;
+margin: 40px;
 background:linear-gradient(45deg,#0052cc,#00aaff);
 color:white;
 
@@ -1454,7 +1454,6 @@ max-width:100%;
 }
 
 
-/* Hover Effect */
 
 .booking-h:hover{
 transform:translateY(-5px);
@@ -1462,7 +1461,6 @@ box-shadow:0 10px 25px rgba(0,82,204,.3);
 }
 
 
-/* Mobile Responsive */
 
 @media(max-width:768px){
 
