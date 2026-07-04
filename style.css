@@ -1432,7 +1432,7 @@ justify-content:center;
 padding:12px 25px;
 font-size:16px;
 font-weight:600;
-margin: 20px auto;
+margin: 30px auto;
 background:linear-gradient(45deg,#ffffff,#00aaff);
 box-shadow: 0 0 10px white;
 color:rgb(0, 0, 0);
@@ -1454,7 +1454,8 @@ max-width:100%;
 
 .booking-h:hover{
 transform:translateY(-5px);
-box-shadow:0 10px 25px rgba(0,82,204,.3);
+box-shadow:0 0 15px rgb(255, 238, 0);
+transform: scale(1.1);
 }
 
 
@@ -1464,7 +1465,7 @@ box-shadow:0 10px 25px rgba(0,82,204,.3);
 width:90%;
 font-size:14px;
 padding:14px 20px;
-margin:20px auto;
+margin:30px auto;
 display:flex;
 align-items: center;
 justify-content: center;
@@ -1476,16 +1477,27 @@ justify-content: center;
   display: inline-flex;
   text-decoration: none;
   margin: 30px 0 30px 40px;
-  color: white;
-  margin-left:5px;
+  color: rgba(0, 0, 0, 0.758);
+  margin-left:2px;
   font-size: medium;
+  font-weight: bold;
   font-family: serif;
-  border: 1px solid rgba(255, 225, 0, 0.676);
-  padding: 8px 16px;
-  border-radius: 15px;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 50px;
   background-color: #ffea00a0;
   box-shadow: 0 0 10px rgba(255, 247, 0, 0.893);
   width: fit-content;
+  transition: 0.6s;
+  transform: scale(0.9);
+}
+
+.more-rev:hover{
+  transform: scale(1);
+  background-color: #00aaff;
+  box-shadow: 0 0 10px rgb(1, 238, 255);
+  border: none;
+
 }
 .click-h{
   display: flex;
@@ -1494,6 +1506,7 @@ justify-content: center;
   margin-left:0px;
   white-space: nowrap;
   word-spacing: 5px;
+  font-weight: bold;
   font-size:medium;
 }
 @media(min-width:769px){
