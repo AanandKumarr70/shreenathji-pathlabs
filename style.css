@@ -1466,7 +1466,7 @@ width:90%;
 font-size:14px;
 padding:14px 20px;
 margin:30px auto;
-display:flex;
+display:inline-flex;
 align-items: center;
 justify-content: center;
 }
