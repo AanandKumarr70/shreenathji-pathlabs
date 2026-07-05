@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shreenathji Pathology - Complete Test List</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{background:linear-gradient(135deg,#e0f2ff 0%,#f4f8ff 100%);padding:20px 10px;}
+
+.header{text-align:center;padding:25px 10px;margin-bottom:20px;}
+.header i{font-size:3rem;color:#0a4d8c;animation: pulse 2s infinite;}
+.header h1{color:#0a4d8c;font-size:32px;margin-top:10px;}
+.header span{color:#f97316;font-size:16px;display:block;}
+.tagline{color:#0a4d8c;font-weight:600;margin-top:5px;}
+
+.container{max-width:1100px;margin:0 auto;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:20px;}
+
+.card{
+  background:#fff;
+  border-radius:20px;
+  padding:25px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.1);
+  border-top:5px solid;
+  opacity:0;
+  transform:translateY(30px);
+  animation: fadeUp 0.6s forwards;
+}
+.card:nth-child(1){border-color:#2563eb;
+     animation-delay:0.1s;}
+
+.card:nth-child(2){border-color:#16a34a; 
+    animation-delay:0.2s;}
+
+.card:nth-child(3){border-color:#dc2626;
+     animation-delay:0.3s;}
+
+.card:nth-child(4){border-color:#7e22ce;
+     animation-delay:0.4s;}
+
+.card:nth-child(5){border-color:#ea580c;
+     animation-delay:0.5s;}
+
+.card-header{display:flex;align-items:center;
+    gap:12px;margin-bottom:15px;
+}
+
+.card-header i{font-size:24px;
+    padding:10px;
+    border-radius:10px;
+    color:#fff;
+}
+
+.card:nth-child(1) .card-header i{background:#2563eb;}
+.card:nth-child(2) .card-header i{background:#16a34a;}
+.card:nth-child(3) .card-header i{background:#dc2626;}
+.card:nth-child(4) .card-header i{background:#7e22ce;}
+.card:nth-child(5) .card-header i{background:#ea580c;}
+
+
+.card h2{font-size:20px;color:#1e293b;}
+.badge{background:linear-gradient(90deg,#ff8c00,#ff5e00);
+    color:#fff;
+    font-size:11px;
+    padding:4px 10px;
+    border-radius:20px;
+    font-weight:600;
+    margin-left:8px;
+    animation: blink 1.5s infinite;
+}
+
+
+.card ul{list-style:none;}
+.card ul li{
+  padding:8px 0;
+  border-bottom:1px dashed #e2e8f0;
+  color:#334155;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  transition:0.3s;
+}
+
+.card ul li:hover{color:#0a4d8c;transform:translateX(5px);}
+.card ul li i{color:#16a34a;font-size:12px;}
+
+
+.floating-btns{position:fixed;
+    bottom:20px;right:20px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;z-index:999;
+}
+
+.floating-btns a{
+  padding:14px 20px;
+  border-radius:50px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:0 6px 15px rgba(0,0,0,0.3);
+  display:flex;
+  align-items:center;
+  gap:10px;font-size:15px;
+  transition:0.3s;
+}
+.floating-btns a:hover{transform:scale(1.08);}
+.call-btn{background:linear-gradient(90deg,#2563eb,#1d4ed8);} 
+.whatsapp-btn{background:linear-gradient(90deg,#25D366,#128C7E);}
+
+
+@keyframes fadeUp{to{opacity:1;transform:translateY(0);}}
+@keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.1);}}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.6;}}
+
+@media (max-width: 768px){
+  .header h1{font-size:24px;}
+  .grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+
+<header class="header">
+  <i class="fa-solid fa-microscope"></i>
+  <h1>Shreenathji <span>PATHOLOGY LABORATORY</span></h1>
+  <p class="tagline">Complete Test List • Accurate Reports</p>
+</header>
+
+<div class="container">
+  <div class="grid">
+
+    
+
+    <div class="card">
+      <div class="card-header">
+        <i class="fa-solid fa-heart-pulse"></i>
+        <h2>Regular Health Checkup <span class="badge">MOST POPULAR</span></h2>
+      </div>
+      <ul>
+        <li><i class="fa-solid fa-circle-check">
+        </i> Complete Blood Count (CBC)</li>
+        <li><i class="fa-solid fa-circle-check">
+        </i> ESR</li>
+        
+        <li><i class="fa-solid fa-circle-check"></i> Fasting Blood Sugar (FBS)</li>
+        <li><i class="fa-solid fa-circle-check"></i> HbA1c</li>
+        <li><i class="fa-solid fa-circle-check"></i> Lipid Profile</li>
+        <li><i class="fa-solid fa-circle-check"></i> Liver Function Test (LFT)</li>
+        <li><i class="fa-solid fa-circle-check"></i> Kidney Function Test (KFT)</li>
+        <li><i class="fa-solid fa-circle-check"></i> Urine Routine & Microscopy</li>
+        <li><i class="fa-solid fa-circle-check"></i> Iron Profile (Serum Iron)</li>
+        <li><i class="fa-solid fa-circle-check"></i> Electrolytes (Na, K, Cl)</li>
+        <li><i class="fa-solid fa-circle-check"></i> Vitamin D (25-OH)</li>
+        <li><i class="fa-solid fa-circle-check"></i> Vitamin B12</li>
+        <li><i class="fa-solid fa-circle-check"></i> Thyroid Stimulating Hormone (TSH)</li>
+        <li><i class="fa-solid fa-circle-check"></i> C-Reactive Protein (CRP)</li>
+        <li><i class="fa-solid fa-circle-check"></i> Ferritin</li>
+      </ul>
+    </div>
+
+    
+
+    <div class="card">
+      <div class="card-header">
+        <i class="fa-solid fa-vial"></i>
+        <h2>Culture & Sensitivity</h2>
+      </div>
+      <ul>
+        <li><i class="fa-solid fa-circle-check"></i> Urine C & S</li>
+        <li><i class="fa-solid fa-circle-check"></i> Blood C & S</li>
+        <li><i class="fa-solid fa-circle-check"></i> Stool C & S</li>
+        <li><i class="fa-solid fa-circle-check"></i> Stool R & M</li>
+        <li><i class="fa-solid fa-circle-check"></i> Sputum C & S</li>
+      </ul>
+    </div>
+
+
+   
+    <div class="card">
+      <div class="card-header">
+        <i class="fa-solid fa-heart"></i>
+        <h2>Cardiac & Special Tests</h2>
+      </div>
+      <ul>
+        <li><i class="fa-solid fa-circle-check"></i> CK-MB And Total</li>
+        <li><i class="fa-solid fa-circle-check"></i> Total IgE</li>
+        <li><i class="fa-solid fa-circle-check"></i> Hb Electrophoresis</li>
+        <li><i class="fa-solid fa-circle-check"></i> RA FACTOR</li>
+        <li><i class="fa-solid fa-circle-check"></i> Troponin I & T</li>
+      </ul>
+    </div>
+
+
+
+    <div class="card">
+      <div class="card-header">
+        <i class="fa-solid fa-dna"></i>
+        <h2>Hormone Profile</h2>
+      </div>
+      <ul>
+        <li><i class="fa-solid fa-circle-check"></i> Total Testosterone</li>
+        <li><i class="fa-solid fa-circle-check"></i> Free Testosterone</li>
+        <li><i class="fa-solid fa-circle-check"></i> FT3, FT4, TSH (FREE THYROID TOTAL)</li>
+        <li><i class="fa-solid fa-circle-check"></i> Prolactin</li>
+        <li><i class="fa-solid fa-circle-check"></i> Luteinizing Hormone (LH)</li>
+        <li><i class="fa-solid fa-circle-check"></i> Follicle Stimulating Hormone (FSH)</li>
+        <li><i class="fa-solid fa-circle-check"></i> Estradiol (E2)</li>
+        <li><i class="fa-solid fa-circle-check"></i> Progesterone</li>
+        <li><i class="fa-solid fa-circle-check"></i> Cortisol</li>
+        <li><i class="fa-solid fa-circle-check"></i> DHEA-S</li>
+        <li><i class="fa-solid fa-circle-check"></i> Insulin (Fasting)</li>
+      </ul>
+    </div>
+
+    
+
+    <div class="card">
+      <div class="card-header">
+        <i class="fa-solid fa-shield-virus"></i>
+        <h2>Infectious Disease Panel</h2>
+      </div>
+      <ul>
+        <li><i class="fa-solid fa-circle-check"></i> HIV 1 & 2</li>
+        <li><i class="fa-solid fa-circle-check"></i> HBsAg (Hepatitis B)</li>
+        <li><i class="fa-solid fa-circle-check"></i> HCV (Hepatitis C)</li>
+        <li><i class="fa-solid fa-circle-check"></i> Dengue NS1, IgG, IgM Antigen</li>
+        <li><i class="fa-solid fa-circle-check"></i> Malaria Parasite (MP)</li>
+        <li><i class="fa-solid fa-circle-check"></i> Malarial Antigen (Rapid Card Test)</li>
+        <li><i class="fa-solid fa-circle-check"></i> Widal Test (Typhoid)</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+
+
+<div class="floating-btns">
+  <a href="tel:7304949191" class="call-btn"><i class="fa-solid fa-phone"></i> Call Now</a>
+  <a href="https://wa.me/917304949191?text=Hello, I want to book a test" target="_blank" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+</div>
+
+</body>
+</html>
