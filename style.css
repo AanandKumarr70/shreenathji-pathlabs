@@ -75,14 +75,13 @@ h1,h2,h3,h4 { font-family: 'Playfair Display', serif; }
    color: #fff;
     border: none;
      cursor: pointer;
-  padding: 5px 10px;
+     white-space: nowrap;
+      padding:10px 20px;
    border-radius: 55px;
-    font-size: 6px; 
-    white-space: nowrap;
+    font-size: 13px; 
     font-weight: 600;
   transition: var(--transition); 
   text-decoration: none;
-   letter-spacing: .3px;
 }
 
 .btn-primary:hover { transform: translateY(-2px);
@@ -98,12 +97,31 @@ h1,h2,h3,h4 { font-family: 'Playfair Display', serif; }
    white-space: nowrap;
     border:none;
   cursor: pointer;
-   padding: 5px 10px;
+   padding: 10px 20px;
     border-radius: 55px;
-     font-size: 6px;
+     font-size: 13px;
   font-weight: 600;
    transition: var(--transition);
     text-decoration: none;
+}
+
+@media (max-width:768px){
+
+  .btn-outline.btn-primary{
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    background: #00967d;
+    box-shadow: 0 0 20px rgb(0, 128, 75);
+    color: white;
+    padding: 0;
+  }
+
 }
 
 .btn-outline:hover { border-color: var(--primary); 
@@ -1145,21 +1163,23 @@ top: 17px;
         }
 
 .fab {
-  width: 56px;
-   height: 56px; 
+  width: 60px;
+   height: 60px; 
    border-radius: 50%;
     border: none;
      cursor: pointer;
-  display: grid;
+     display: grid;
    place-items: center;
-    font-size: 24px;
+    font-size:32px;
   box-shadow: 0 4px 20px rgba(0,0,0,.4);
    transition: var(--transition);
 }
 .fab:hover { transform: scale(1.15); }
 
-.fab-wa { background: var(--wa);
-   color: #fff; }
+.fab-wa {
+   background: var(--wa);
+   color: #fff;
+   }
 
 .fab-call { background: var(--primary);
    color: #fff; }
@@ -1436,8 +1456,8 @@ padding:12px 25px;
 font-size:16px;
 font-weight:600;
 margin: 30px auto;
-background:linear-gradient(45deg,#ffffff77,#004d7470);
-box-shadow: 0 0 10px rgba(0, 80, 84, 0.728);
+background:linear-gradient(45deg,#00729b77,#004d7470);
+box-shadow: 0 0 10px rgb(0, 129, 164);
 color:rgba(255, 255, 255, 0.79);
 
 border:none;
@@ -1449,7 +1469,6 @@ cursor:pointer;
 text-decoration:none;
 
 transition:all .4s ease;
-transform: scale(0.8);
 
 width:fit-content;
 min-width:160px;
@@ -1457,8 +1476,7 @@ max-width:100%;
 }
 
 .booking-h:hover{
-transform:translateY(-5px)scale(0.9);
-box-shadow:0 0 15px rgba(0, 40, 90, 0.516);
+box-shadow:0 0 15px rgba(0, 59, 131, 0.737);
 }
 
 
@@ -1494,14 +1512,12 @@ align-items: center;
   box-shadow: 0 0 10px rgba(0, 169, 169, 0.555);
   width: fit-content;
   transition: 0.6s;
-  transform: scale(0.9);
 }
 
 .more-rev:hover{
-  transform: scale(1);
   background-color: #00537d96;
   box-shadow: 0 0 10px rgba(0, 94, 101, 0.626);
-  border: none;
+  border:none;
 
 }
 .click-h{
