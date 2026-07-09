@@ -29,73 +29,67 @@ function showToast(msg, type='info') {
 
 
 
-function openModal(id)  { document.getElementById(id).classList.add('active'); }
-function closeModal(id) { document.getElementById(id).classList.remove('active'); }
-function switchModal(from, to) { closeModal(from); openModal(to); }
+function openModal(id) {
+  document.getElementById(id).classList.add("active");
+}
 
-document.getElementById('loginBtn').onclick  = () => openModal('loginModal');
-document.getElementById('signupBtn').onclick = () => openModal('signupModal');
+function closeModal(id) {
+  document.getElementById(id).classList.remove("active");
+}
+
+document.getElementById("loginBtn").onclick = () => openModal("loginModal");
+document.getElementById("signupBtn").onclick = () => openModal("signupModal");
 
 
 
-document.querySelectorAll('.modal-overlay').forEach(el => {
-  el.addEventListener('click', e => { if (e.target === el) el.classList.remove('active'); });
+document.querySelectorAll(".modal-overlay").forEach((modal) => {
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModal(modal.id);
+    }
+  });
 });
 
 
 
-function signupUser() {
-  const name  = document.getElementById('suName').value.trim();
-  const phone = document.getElementById('suPhone').value.trim();
-  const email = document.getElementById('suEmail').value.trim();
-  const pass  = document.getElementById('suPass').value;
-  const age   = document.getElementById('suAge').value;
+function bookHomeCollection() {
 
-  if (!name)  return showToast('Please enter your full name', 'error');
-  if (!phone) return showToast('Mobile number is required', 'error');
-  if (pass.length < 6) return showToast('Password must be at least 6 characters', 'error');
+  const name = document.getElementById("hcName").value.trim();
+  const phone = document.getElementById("hcPhone").value.trim();
+  const address = document.getElementById("hcAddress").value.trim();
+  const date = document.getElementById("hcDate").value;
 
-  const users = store.getUsers();
-  if (users.find(u => u.phone === phone)) {
-    return showToast('Account already exists with this number', 'error');
+  if (!name) {
+    return showToast("Please enter your name", "error");
   }
 
-  const user = { id: Date.now().toString(), name, phone, email, age, pass, createdAt: new Date().toLocaleString() };
-  users.push(user);
-  store.setUsers(users);
-  store.setSession(user);
-  closeModal('signupModal');
-  updateNavForUser(user);
-  showToast(`Welcome, ${name}! Account created ✨`, 'success');
+  if (!phone) {
+    return showToast("Please enter your mobile number", "error");
+  }
+
+  if (!address) {
+    return showToast("Please enter your address", "error");
+  }
+
+  showToast("Home Collection Request Submitted Successfully!", "success");
+
+  document.getElementById("hcName").value = "";
+  document.getElementById("hcPhone").value = "";
+  document.getElementById("hcAddress").value = "";
+  document.getElementById("hcDate").value = "";
+
+  closeModal("loginModal");
 }
 
 
 
-function loginUser() {
-  const id   = document.getElementById('loginId').value.trim();
-  const pass = document.getElementById('loginPass').value;
-
-  const users = store.getUsers();
-  const user  = users.find(u => (u.phone === id || u.email === id) && u.pass === pass);
-
-  if (!user) return showToast('Invalid credentials. Please try again.', 'error');
-
-  store.setSession(user);
-  closeModal('loginModal');
-  updateNavForUser(user);
-  showToast(`Welcome back, ${user.name}!`, 'success');
+    function openGoogleMap() {
+    window.open(
+        "https://www.google.com/maps/search/?api=1&query=Shop+No.18+Innas+wadi+Market+Kharodi+Rd+near+Sir+JP+School+Malad+Rathodi+Kharodi+Malad+Mumbai+Maharashtra+400095",
+        "_blank"
+    );
 }
 
-
-
-function logoutUser() {
-  store.clearSession();
-  document.getElementById('userMenu').style.display = 'none';
-  document.getElementById('loginBtn').style.display = '';
-  document.getElementById('signupBtn').style.display = '';
-  document.getElementById('dashboard').style.display = 'none';
-  showToast('Logged out successfully', 'info');
-}
 
 
 

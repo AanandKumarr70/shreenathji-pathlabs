@@ -33,14 +33,15 @@
     <li><a href="#home">Home</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#appointment">Book Test</a></li>
+    <li><a href="#appointment">Book Test</a></l
+      i>
     <li><a href="#contact">Contact</a></li>
   </ul>
 
 
   <div class="nav-actions">
-    <button class="btn-outline" id="loginBtn">Login</button>
-    <button class="btn-primary" id="signupBtn">Sign Up</button>
+    <button class="btn-outline" id="loginBtn">🏠 Book Home Collection</button>
+    <button class="btn-primary" id="signupBtn">🧪 Visit Our Lab</button>
     <div class="user-menu" id="userMenu" style="display:none;">
       <div class="avatar" id="userAvatar">U</div>
       <div class="dropdown" id="userDropdown">
@@ -86,9 +87,9 @@
     </div>
 
     <div class="hero-stats animate-fadeup delay-5">
-      <div class="stat"><span class="stat-num" data-target="30000">0</span>
+      <div class="stat"><span class="stat-num" data-target="50000">0</span>
         <span>+</span><p>Patients Served</p></div>
-      <div class="stat"><span class="stat-num" data-target="300">0</span>
+      <div class="stat"><span class="stat-num" data-target="500">0</span>
         <span>+</span><p>Tests Available</p></div>
       <div class="stat"><span class="stat-num" data-target="7">0</span>
         <span>+</span><p>Years Experience</p></div>
@@ -99,7 +100,7 @@
     <a href="https://g.co/kgs/7Qe51v" target="_blank" 
     style="text-decoration: none;">
     <div class="stat"><span class="stat-num" data-target="4">0</span>
-        <span>.9⭐⭐⭐⭐⭐</span><p>204+ Google Reviews</p>
+        <span>.9⭐⭐⭐⭐⭐</span><p>205+ Google Reviews</p>
       </div>
       <a href="reviews.html" class="more-rev">
       <p class="click-h">CLICK HERE TO KNOW MORE REVIEWS</p>
@@ -159,7 +160,6 @@
   <a href="fees.html" class="fees-check">
     <p class="Checkup-fees">CHECK-UP FEES HERE</p>
   </a>
-<br>
   <a href="list.html" class="list-check">
     <p  class="Checkup-list">CHECK-UP LIST HERE</p>
   </a>
@@ -707,79 +707,90 @@
 
 <div class="modal-overlay" id="loginModal">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('loginModal')"><i class="fas fa-times"></i></button>
-    <div class="modal-logo"><i class="fas fa-microscope"></i></div>
-    <h2>Welcome Back</h2>
-
-    <p class="modal-sub">Login to your patient account</p>
-
-    <div class="form-group">
-      <label>Mobile / Email</label>
-
-      <input type="text" id="loginId" placeholder="Your mobile or email"/>
-    </div>
-
-    <div class="form-group">
-      <label>Password</label>
-      <input type="password" id="loginPass" placeholder="Password"/>
-    </div>
-
-    <button class="btn-primary btn-block" onclick="loginUser()">
-      <i class="fas fa-sign-in-alt"></i> Login
+    <button class="modal-close" onclick="closeModal('loginModal')">
+      <i class="fas fa-times"></i>
     </button>
 
-    <p class="modal-switch">New here?
-       <a href="#" onclick="switchModal('loginModal','signupModal')">Create account</a></p>
-  </div>
-</div>
+    <div class="modal-logo home-logo">
+      <i class="fas fa-house-medical"></i>
+    </div>
 
+    <h2>Book Home Collection</h2>
+    <p class="modal-sub">
+      Schedule a home sample collection at your convenience.
+    </p>
 
-                  <!-- SIGNUP -->
-
-<div class="modal-overlay" id="signupModal">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal('signupModal')"><i class="fas fa-times"></i></button>
-    <div class="modal-logo"><i class="fas fa-microscope"></i></div>
-    <h2>Create Account</h2>
-    <p class="modal-sub">Join Shreenathji Path Labs Patient Portal</p>
-    <div class="form-row">
-      <div class="form-group">
-        <label>Full Name *</label>
-        <input type="text" id="suName" placeholder="Your full name"/>
-      </div>
-
-      <div class="form-group">
-        <label>Age</label>
-        <input type="number" id="suAge" placeholder="Age"/>
-      </div>
+    <div class="form-group">
+      <label>Patient Name *</label>
+      <input type="text" id="hcName" placeholder="Enter your full name">
     </div>
 
     <div class="form-group">
       <label>Mobile Number *</label>
-      <input type="tel" id="suPhone" placeholder="+91 XXXXX XXXXX"/>
+      <input type="tel" id="hcPhone" placeholder="+91 XXXXX XXXXX">
     </div>
 
     <div class="form-group">
-      <label>Email Address</label>
-      <input type="email" id="suEmail" placeholder="email@example.com"/>
+      <label>Address *</label>
+      <input type="text" id="hcAddress" placeholder="Enter your address">
     </div>
 
     <div class="form-group">
-      <label>Password *</label>
-      <input type="password" id="suPass" placeholder="Create password (min 6 chars)"/>
+      <label>Preferred Date</label>
+      <input type="date" id="hcDate">
     </div>
 
-    <button class="btn-primary btn-block" onclick="signupUser()">
-      <i class="fas fa-user-plus"></i> Create Account
+    <button class="btn-home btn-block" onclick="bookHomeCollection()">
+      <i class="fas fa-house-medical"></i>
+      Book Home Collection
     </button>
-
-    <p class="modal-switch">Already registered? 
-      <a href="#" onclick="switchModal('signupModal','loginModal')">Login</a></p>
   </div>
 </div>
 
 
-<div class="toast" id="toast"></div>
+
+    <div class="modal-overlay" id="signupModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('signupModal')">
+      <i class="fas fa-times"></i>
+    </button>
+
+    <div class="modal-logo lab-logo">
+      <i class="fas fa-flask"></i>
+    </div>
+
+    <h2>Visit Our Lab</h2>
+
+    <p class="modal-sub">
+      Visit our laboratory for quick and accurate testing.
+    </p>
+
+    <div class="lab-details">
+
+      <div class="lab-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Shreenathji Path Labs, Malad West</span>
+      </div>
+
+      <div class="lab-item">
+        <i class="fas fa-clock"></i>
+        <span>Mon - Sun : 7:00 AM - 10:00 PM/24hrs</span>
+      </div>
+
+      <div class="lab-item">
+        <i class="fas fa-phone"></i>
+        <span>+917304949191</span>
+      </div>
+
+    </div>
+
+    <button class="btn-lab btn-block" onclick="openGoogleMap()">
+      <i class="fas fa-location-dot"></i>
+      Get Directions
+    </button>
+
+  </div>
+</div>
 
 <script src="app.js"></script>
 </body>
