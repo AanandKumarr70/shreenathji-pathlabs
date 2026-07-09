@@ -52,7 +52,7 @@ document.querySelectorAll(".modal-overlay").forEach((modal) => {
 
 
 
-function bookHomeCollection() {
+async function bookHomeCollection() {
 
   const name = document.getElementById("hcName").value.trim();
   const phone = document.getElementById("hcPhone").value.trim();
@@ -71,16 +71,55 @@ function bookHomeCollection() {
     return showToast("Please enter your address", "error");
   }
 
-  showToast("Home Collection Request Submitted Successfully!", "success");
+  try {
 
-  document.getElementById("hcName").value = "";
-  document.getElementById("hcPhone").value = "";
-  document.getElementById("hcAddress").value = "";
-  document.getElementById("hcDate").value = "";
+    const res = await fetch("http://localhost:5000/appointment", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: name,
+        phone: phone,
+        address: address,
+        date: date,
 
-  closeModal("loginModal");
+        age: "",
+        gender: "",
+        email: "",
+        test: "Home Sample Collection",
+        time: "",
+        sampleCollection: "Home"
+      })
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+
+      showToast("Home Collection Booked Successfully!", "success");
+
+      document.getElementById("hcName").value = "";
+      document.getElementById("hcPhone").value = "";
+      document.getElementById("hcAddress").value = "";
+      document.getElementById("hcDate").value = "";
+
+      closeModal("loginModal");
+
+    } else {
+
+      showToast(data.message, "error");
+
+    }
+
+  } catch (err) {
+
+    console.error(err);
+    showToast("Server Error! Please try again.", "error");
+
+  }
+
 }
-
 
 
     function openGoogleMap() {
