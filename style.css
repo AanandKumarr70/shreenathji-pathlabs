@@ -70,14 +70,16 @@ h1,h2,h3,h4 { font-family: 'Playfair Display', serif; }
 .btn-primary {
   display: inline-flex; 
   align-items: center; 
-  gap: 8px;
+  gap: 2px;
   background: var(--grad);
-   color: #fff;
-    border: none;
+   color: #27001f;
+    border:1px solid blue;
      cursor: pointer;
-      padding:10px 20px;
-   border-radius: 55px;
-    font-size: 13px; 
+      flex-wrap: wrap;
+      padding:8px 16px;
+   border-radius: 15px;
+    font-size: 10px; 
+    font-weight: bold;
     font-weight: 600;
   transition: var(--transition); 
   text-decoration: none;
@@ -90,35 +92,21 @@ h1,h2,h3,h4 { font-family: 'Playfair Display', serif; }
 .btn-outline {
   display: inline-flex;
    align-items: center;
-    gap: 8px;
+    gap: 5px;
    background: var(--grad);
-   color:white;
-    border:none;
+   color: #27001f;
+    border:1px solid blue;
   cursor: pointer;
-   padding: 10px 20px;
-    border-radius: 55px;
-     font-size: 13px;
+  font-weight: bold;
+   padding: 8px 16px;
+    border-radius:15px;
+     font-size: 10px;
+     flex-wrap: wrap;
   font-weight: 600;
    transition: var(--transition);
     text-decoration: none;
 }
 
-@media (max-width:768px){
-
-  .btn-outline.btn-primary{
-    padding: 11px 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border-radius: 50%;
-    background: #00967d;
-    box-shadow: 0 0 20px rgb(0, 128, 75);
-    color: white;
-    padding: 0;
-  }
-
-}
 
 .btn-outline:hover { border-color: var(--primary); 
     box-shadow: 0 0 30px rgb(26, 111, 196);
@@ -1167,7 +1155,7 @@ top: 17px;
      display: grid;
    place-items: center;
     font-size:32px;
-  box-shadow: 0 4px 20px rgba(0,0,0,.4);
+  box-shadow: 0 0 15px rgba(0, 82, 27, 0.664);
    transition: var(--transition);
 }
 .fab:hover { transform: scale(1.15); }
@@ -1452,11 +1440,11 @@ padding:12px 25px;
 font-size:16px;
 font-weight:600;
 margin: 30px auto;
-background:linear-gradient(45deg,#00729b77,#004d7470);
-box-shadow: 0 0 10px rgb(0, 129, 164);
-color:rgba(255, 255, 255, 0.79);
+background:linear-gradient(45deg,#0c5dc8dc,#0578e3ec);
+box-shadow: 0 0 15px rgb(7, 164, 255);
+color: #27001f;
 
-border:none;
+border:1px solid rgb(0, 34, 255);
 border-radius:50px;
 
 word-spacing: 5px;
@@ -1472,7 +1460,7 @@ max-width:100%;
 }
 
 .booking-h:hover{
-box-shadow:0 0 15px rgba(0, 59, 131, 0.737);
+box-shadow:0 0 15px rgb(0, 115, 255);
 }
 
 
@@ -1496,24 +1484,23 @@ align-items: center;
   display: inline-flex;
   text-decoration: none;
   margin: 30px 0 30px 40px;
-  color: rgba(249, 249, 249, 0.758);
+  color: #27001f;
   margin-left:8px;
   font-size: medium;
   font-weight: bold;
   font-family: serif;
-  border: none;
+  border: 1px solid rgb(0, 74, 90);
   padding: 7px 15px;
-  border-radius: 50px;
-  background-color: #008fa280;
-  box-shadow: 0 0 10px rgba(0, 169, 169, 0.555);
+  border-radius: 15px;
+  background-color: #0080ff;
+  box-shadow: 0 0 15px rgb(0, 140, 255);
   width: fit-content;
   transition: 0.6s;
 }
 
 .more-rev:hover{
-  background-color: #00537d96;
-  box-shadow: 0 0 10px rgba(0, 94, 101, 0.626);
-  border:none;
+  box-shadow: 0 0 15px rgb(0, 157, 255);
+  border:1px solid rgba(0, 0, 88, 0.772);
 
 }
 .click-h{
@@ -1542,9 +1529,11 @@ justify-content: center;
 .fees-check{
   padding: 10px 20px;
   border-radius: 20px;
-  background: rgba(0, 67, 98, 0.541);
-  box-shadow: 0 0 10px rgba(0, 99, 186, 0.74);
-  color:rgba(255, 255, 255, 0.817);
+  font-weight: bold;
+  background: rgba(0, 119, 255, 0.92);
+  box-shadow: 0 0 10px rgb(0, 99, 186);
+  border: 1px solid blue;
+  color: #27001f;
   text-decoration: none;
 }
 
@@ -1569,9 +1558,11 @@ text-decoration: none;
 .Checkup-list{
   padding: 10px 20px;
   border-radius: 20px;
-  background: rgba(0, 80, 101, 0.468);
-  box-shadow: 0 0 10px rgba(0, 99, 186, 0.74);
-  color:rgba(255, 255, 255, 0.831);
+  font-weight: bold;
+  border: 1px solid blue;
+  background: rgba(0, 139, 253, 0.881);
+  box-shadow: 0 0 10px rgba(0, 99, 186, 0.911);
+  color: #27001f;
 }
 
 .home-logo{
