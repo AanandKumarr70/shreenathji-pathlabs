@@ -72,9 +72,9 @@ h1,h2,h3,h4 { font-family: 'Playfair Display', serif; }
   align-items: center; 
   justify-content: center;
   gap:10px;
-  background: var(--grad);
-   color: #27001f;
-    border:1px solid rgba(0, 0, 255, 0.607);
+  background:rgba(0, 255, 128, 0.068);
+   color: #04ffc9;
+    border:1px solid rgb(0, 255, 183);
      cursor: pointer;
       padding:4px 8px;
    border-radius:15px;
@@ -83,11 +83,10 @@ h1,h2,h3,h4 { font-family: 'Playfair Display', serif; }
     font-weight: 600;
   transition: var(--transition); 
   text-decoration: none;
-   box-shadow: 0 0 5px rgb(6, 111, 217);
 }
 
-.btn-primary:hover { transform: translateY(-2px);
-     box-shadow: 0 0 30px rgb(26, 111, 196);
+.btn-primary:hover {
+   transform: translateY(-2px);
      }
 
 .btn-outline {
@@ -95,9 +94,9 @@ h1,h2,h3,h4 { font-family: 'Playfair Display', serif; }
    align-items: center;
    justify-content: center;
     gap: 10px;
-   background: var(--grad);
-   color: #27001f;
-    border:1px solid rgba(0, 0, 255, 0.534);
+   background:rgba(0, 255, 128, 0.068);
+   color: #04ffb4;
+    border:1px solid rgb(0, 255, 191);
   cursor: pointer;
   font-weight: bold;
    padding: 4px 8px;
@@ -106,12 +105,11 @@ h1,h2,h3,h4 { font-family: 'Playfair Display', serif; }
   font-weight: 600;
    transition: var(--transition);
     text-decoration: none;
-    box-shadow: 0 0 5px rgb(6, 111, 217);
 }
 
 
-.btn-outline:hover { border-color: var(--primary); 
-    box-shadow: 0 0 30px rgb(26, 111, 196);
+.btn-outline:hover { 
+  border-color: rgb(0, 128, 77); 
     transform: translateY(-2px);
  }
 
@@ -1438,15 +1436,15 @@ display:inline-flex;
 align-items:center;
 justify-content:center;
 
-padding:12px 25px;
+padding:8px 16px;
 font-size:16px;
-font-weight:600;
+font-weight:bold;
 margin: 30px auto;
-background:linear-gradient(45deg,#0c5dc8dc,#0578e3ec);
-box-shadow: 0 0 15px rgb(7, 164, 255);
-color: #27001f;
+background:linear-gradient(45deg,#10fac41a,#00ffc32f);
+color: #04fcca;
+gap: 10px;
 
-border:1px solid rgb(0, 34, 255);
+border:1px solid rgb(1, 255, 196);
 border-radius:50px;
 
 word-spacing: 5px;
@@ -1461,9 +1459,6 @@ min-width:160px;
 max-width:100%;
 }
 
-.booking-h:hover{
-box-shadow:0 0 15px rgb(0, 115, 255);
-}
 
 
 
@@ -1473,7 +1468,7 @@ width:90%;
 width: fit-content;
 max-width: 300px;
 font-size:14px;
-padding:14px 20px;
+padding:8px 16px;
 margin:30px auto;
 display:flex;
 justify-content: center;
@@ -1486,23 +1481,21 @@ align-items: center;
   display: inline-flex;
   text-decoration: none;
   margin: 30px 0 30px 40px;
-  color: #27001f;
+  color: #00ffd5;
   margin-left:8px;
-  font-size: medium;
+  font-size: 15px;
   font-weight: bold;
   font-family: serif;
-  border: 1px solid rgb(0, 74, 90);
+  border: 1px solid rgba(0, 176, 132, 0.728);
   padding: 5px 10px;
   border-radius: 10px;
-  background-color: #0080ff;
-  box-shadow: 0 0 15px rgb(0, 140, 255);
+  background: #04ffb416;
   width: fit-content;
   transition: 0.6s;
 }
 
 .more-rev:hover{
-  box-shadow: 0 0 15px rgb(0, 157, 255);
-  border:1px solid rgba(0, 0, 88, 0.772);
+  border:1px solid rgb(0, 215, 176);
 
 }
 .click-h{
@@ -1532,10 +1525,9 @@ justify-content: center;
   padding: 10px 20px;
   border-radius: 20px;
   font-weight: bold;
-  background: rgba(0, 119, 255, 0.92);
-  box-shadow: 0 0 10px rgb(0, 99, 186);
-  border: 1px solid blue;
-  color: #27001f;
+  background: rgba(0, 255, 187, 0.11);
+  border: 1px solid rgb(0, 255, 170);
+  color: #0affe7;
   text-decoration: none;
 }
 
@@ -1561,10 +1553,9 @@ text-decoration: none;
   padding: 10px 20px;
   border-radius: 20px;
   font-weight: bold;
-  border: 1px solid blue;
-  background: rgba(0, 139, 253, 0.881);
-  box-shadow: 0 0 10px rgba(0, 99, 186, 0.911);
-  color: #27001f;
+  background: rgba(0, 255, 187, 0.11);
+  border: 1px solid rgb(0, 255, 170);
+  color: #0affe7;
 }
 
 .home-logo{
