@@ -70,19 +70,20 @@ h1,h2,h3,h4 { font-family: 'Playfair Display', serif; }
 .btn-primary {
   display: inline-flex; 
   align-items: center; 
+  justify-content: center;
   gap: 2px;
   background: var(--grad);
    color: #27001f;
-    border:1px solid blue;
+    border:1px solid rgba(0, 0, 255, 0.607);
      cursor: pointer;
-      flex-wrap: wrap;
       padding:3px 6px;
-   border-radius: 15px;
+   border-radius:5px 5px;
     font-size: 10px; 
     font-weight: bold;
     font-weight: 600;
   transition: var(--transition); 
   text-decoration: none;
+   box-shadow: 0 0 5px rgb(6, 111, 217);
 }
 
 .btn-primary:hover { transform: translateY(-2px);
@@ -92,19 +93,20 @@ h1,h2,h3,h4 { font-family: 'Playfair Display', serif; }
 .btn-outline {
   display: inline-flex;
    align-items: center;
-    gap: 1px;
+   justify-content: center;
+    gap: 10px;
    background: var(--grad);
    color: #27001f;
-    border:1px solid blue;
+    border:1px solid rgba(0, 0, 255, 0.534);
   cursor: pointer;
   font-weight: bold;
    padding: 3px 6px;
-    border-radius:15px;
+    border-radius:5px 10px;
      font-size: 10px;
-     flex-wrap: wrap;
   font-weight: 600;
    transition: var(--transition);
     text-decoration: none;
+    box-shadow: 0 0 5px rgb(6, 111, 217);
 }
 
 
@@ -1490,8 +1492,8 @@ align-items: center;
   font-weight: bold;
   font-family: serif;
   border: 1px solid rgb(0, 74, 90);
-  padding: 7px 15px;
-  border-radius: 15px;
+  padding: 5px 10px;
+  border-radius: 10px;
   background-color: #0080ff;
   box-shadow: 0 0 15px rgb(0, 140, 255);
   width: fit-content;
