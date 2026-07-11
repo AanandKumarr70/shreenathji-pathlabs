@@ -76,9 +76,9 @@ h1,h2,h3,h4 { font-family: 'Playfair Display', serif; }
    color: #27001f;
     border:1px solid rgba(0, 0, 255, 0.607);
      cursor: pointer;
-      padding:3px 6px;
+      padding:4px 8px;
    border-radius:5px 5px;
-    font-size: 10px; 
+    font-size: 13px; 
     font-weight: bold;
     font-weight: 600;
   transition: var(--transition); 
@@ -100,9 +100,9 @@ h1,h2,h3,h4 { font-family: 'Playfair Display', serif; }
     border:1px solid rgba(0, 0, 255, 0.534);
   cursor: pointer;
   font-weight: bold;
-   padding: 3px 6px;
+   padding: 4px 8px;
     border-radius:5px 10px;
-     font-size: 10px;
+     font-size: 13px;
   font-weight: 600;
    transition: var(--transition);
     text-decoration: none;
