@@ -71,7 +71,7 @@ h1,h2,h3,h4 { font-family: 'Playfair Display', serif; }
   display: inline-flex; 
   align-items: center; 
   justify-content: center;
-  gap: 2px;
+  gap:10px;
   background: var(--grad);
    color: #27001f;
     border:1px solid rgba(0, 0, 255, 0.607);
