@@ -1432,7 +1432,7 @@ top: 17px;
 
 
 .booking-h{
-display:inline-flex;
+display:flex;
 align-items:center;
 justify-content:center;
 
