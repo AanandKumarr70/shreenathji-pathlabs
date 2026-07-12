@@ -74,7 +74,7 @@ h1,h2,h3,h4 { font-family: 'Playfair Display', serif; }
   gap:10px;
   background:rgba(0, 255, 128, 0.068);
    color: #04ffc9;
-    border:1px solid rgb(0, 255, 183);
+    border: 1px solid rgba(0, 255, 170, 0.169);
      cursor: pointer;
       padding:4px 8px;
    border-radius:15px;
@@ -96,7 +96,7 @@ h1,h2,h3,h4 { font-family: 'Playfair Display', serif; }
     gap: 10px;
    background:rgba(0, 255, 128, 0.068);
    color: #04ffb4;
-    border:1px solid rgb(0, 255, 191);
+     border: 1px solid rgba(0, 255, 170, 0.169);
   cursor: pointer;
   font-weight: bold;
    padding: 4px 8px;
@@ -1444,7 +1444,7 @@ background:linear-gradient(45deg,#10fac41a,#00ffc32f);
 color: #04fcca;
 gap: 10px;
 
-border:1px solid rgb(1, 255, 196);
+border: 1px solid rgba(0, 255, 170, 0.169);
 border-radius:50px;
 
 word-spacing: 5px;
@@ -1486,7 +1486,7 @@ align-items: center;
   font-size: 15px;
   font-weight: bold;
   font-family: serif;
-  border: 1px solid rgba(0, 176, 132, 0.728);
+   border: 1px solid rgba(0, 255, 170, 0.169);
   padding: 5px 10px;
   border-radius: 10px;
   background: #04ffb416;
@@ -1526,7 +1526,7 @@ justify-content: center;
   border-radius: 20px;
   font-weight: bold;
   background: rgba(0, 255, 187, 0.11);
-  border: 1px solid rgb(0, 255, 170);
+  border: 1px solid rgba(0, 255, 170, 0.169);
   color: #0affe7;
   text-decoration: none;
 }
@@ -1554,7 +1554,7 @@ text-decoration: none;
   border-radius: 20px;
   font-weight: bold;
   background: rgba(0, 255, 187, 0.11);
-  border: 1px solid rgb(0, 255, 170);
+   border: 1px solid rgba(0, 255, 170, 0.169);
   color: #0affe7;
 }
 
@@ -1631,7 +1631,7 @@ font-size:18px;
   display:inline-flex;
   justify-content: center;
   border: 1px solid rgba(0, 119, 58, 0.416);
-   background: linear-gradient(135deg, #00693d1a 0%, #00995933 100%);
+   background: linear-gradient(135deg, #00693d1a 0%, #0099591f 100%);
   align-items: center;
   padding: 6px 12px;
   border-radius: 20px;
@@ -1655,11 +1655,11 @@ font-size:18px;
    display:inline-flex;
   justify-content: center;
   border: 1px solid rgba(0, 119, 58, 0.416);
-   background: linear-gradient(135deg, #00693d1a 0%, #00995933 100%);
+   background: linear-gradient(135deg, #00693d1a 0%, #0099591c 100%);
   align-items: center;
   padding: 6px 12px;
   border-radius: 20px;
-  color: rgba(0, 253, 219, 0.804);
+  color: rgba(0, 253, 232, 0.804);
   font-family: sans-serif;
   font-size:14px;
   font-weight: bold;
