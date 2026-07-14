@@ -73,45 +73,28 @@ async function bookHomeCollection() {
 
   try {
 
-    const res = await fetch("http://localhost:5000/appointment", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        name: name,
-        phone: phone,
-        address: address,
-        date: date,
+const message = `*New Home Collection Booking*%0A%0A` +
+              `*Patient Name:* ${name}%0A` +
+              `*Mobile:* ${phone}%0A` +
+              `*Address:* ${address}%0A` +
+              `*Preferred Date:* ${date}%0A` +
+              `*Test:* Home Sample Collection%0A%0A` +
+              `_From Shreenathjii Path Laboratory Website_`;
 
-        age: "",
-        gender: "",
-        email: "",
-        test: "Home Sample Collection",
-        time: "",
-        sampleCollection: "Home"
-      })
-    });
+const whatsappURL = `https://wa.me/917304949191?text=${message}`;
 
-    const data = await res.json();
 
-    if (data.success) {
+window.open(whatsappURL, '_blank');
 
-      showToast("Home Collection Booked Successfully!", "success");
+showToast("Home Collection Booked Successfully!", "success");
+    
+document.getElementById("hcName").value = "";
+document.getElementById("hcPhone").value = "";
+document.getElementById("hcAddress").value = "";
+document.getElementById("hcDate").value = "";
 
-      document.getElementById("hcName").value = "";
-      document.getElementById("hcPhone").value = "";
-      document.getElementById("hcAddress").value = "";
-      document.getElementById("hcDate").value = "";
-
-      closeModal("loginModal");
-
-    } else {
-
-      showToast(data.message, "error");
-
-    }
-
+closeModal("loginModal");
+     
   } catch (err) {
 
     console.error(err);
@@ -595,4 +578,56 @@ window.addEventListener('DOMContentLoaded', () => {
       a.style.color = a.getAttribute('href') === `#${current}` ? 'var(--accent)' : '';  
     });
   });
+});
+
+
+
+document.getElementById("aptForm").addEventListener("submit", function(e) {
+    e.preventDefault(); 
+
+  
+    const name = document.getElementById("aptName").value;
+    const age = document.getElementById("aptAge").value;
+    const phone = document.getElementById("aptPhone").value;
+    const gender = document.getElementById("aptGender").value;
+    const email = document.getElementById("aptEmail").value;
+    const test = document.getElementById("aptTest").value;
+    const date = document.getElementById("aptDate").value;
+    const time = document.getElementById("aptTime").value;
+    const sample = document.getElementById("aptCollection").value;
+    const address = document.getElementById("aptAddress").value;
+
+  
+    if (!name || !phone || !test || !date) {
+        return showToast("Please fill all required fields *", "error");
+    }
+
+    try {
+    
+        const message = `*New Lab Appointment Booking*%0A%0A` +
+                      `*Name:* ${name}%0A` +
+                      `*Age:* ${age} | *Gender:* ${gender}%0A` +
+                      `*Mobile:* ${phone}%0A` +
+                      `*Email:* ${email}%0A` +
+                      `*Test:* ${test}%0A` +
+                      `*Date:* ${date} | *Time:* ${time}%0A` +
+                      `*Sample:* ${sample}%0A` +
+                      `*Address/Notes:* ${address}%0A%0A` +
+                      `_From Shreenathjii Path Laboratory Website_`;
+
+    
+        const whatsappURL = `https://wa.me/917304949191?text=${message}`;
+        
+      
+        window.open(whatsappURL, '_blank');
+
+        showToast("Appointment Request Sent!", "success");
+        
+      
+        document.getElementById("aptForm").reset();
+
+    } catch (err) {
+        console.error(err);
+        showToast("Server Error! Please try again.", "error");
+    }
 });
