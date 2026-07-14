@@ -1677,7 +1677,7 @@ font-size:18px;
   overflow: auto;
   top: 100%;
   left: 0;
-  background: rgba(0, 255, 166, 0.132);
+  background: rgb(0, 140, 205);
   min-width: 180px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   border: 1px solid rgba(0, 255, 174, 0.212);
@@ -1689,7 +1689,8 @@ font-size:18px;
 .dropdown-menu li  {
   display: block;
   padding: 10px 16px;
-  color: #00ffeade;
+  color: #38002cde;
+  font-weight: bold;
   text-decoration: none;
 }
 
@@ -1711,8 +1712,8 @@ font-size:18px;
   overflow: auto;
   top: 100%;
   left: 0;
-  background: rgba(0, 255, 136, 0.103);
-  min-width: 380px;
+  background: rgb(4, 138, 196);
+  min-width: 390px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   border: 1px solid rgba(0, 255, 174, 0.212);
   border-radius: 20px;
@@ -1723,7 +1724,8 @@ font-size:18px;
 .dropdown-home li {
   display: block;
   padding: 10px 16px;
-  color: #00ffeade;
+  color: #2f0021de;
+  font-weight: bold;
   text-decoration: none;
 }
 
