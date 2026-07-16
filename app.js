@@ -52,12 +52,16 @@ document.querySelectorAll(".modal-overlay").forEach((modal) => {
 
 
 
-async function bookHomeCollection() {
+async function bookHomeCollection(event) {
+  event.preventDefault();
+  console.log("button clicked")
 
   const name = document.getElementById("hcName").value.trim();
   const phone = document.getElementById("hcPhone").value.trim();
   const address = document.getElementById("hcAddress").value.trim();
   const date = document.getElementById("hcDate").value;
+  const service = document.getElementById("hcService").value;
+
 
   if (!name) {
     return showToast("Please enter your name", "error");
@@ -71,6 +75,10 @@ async function bookHomeCollection() {
     return showToast("Please enter your address", "error");
   }
 
+  if (!service) {
+    return showToast("Please select your area", "error");
+}
+
   try {
 
 const message = `*New Home Collection Booking*%0A%0A` +
@@ -78,11 +86,11 @@ const message = `*New Home Collection Booking*%0A%0A` +
               `*Mobile:* ${phone}%0A` +
               `*Address:* ${address}%0A` +
               `*Preferred Date:* ${date}%0A` +
+              `*Area Service:* ${service}%0A` +
               `*Test:* Home Sample Collection%0A%0A` +
               `_From Shreenathjii Path Laboratory Website_`;
 
-const whatsappURL = `https://wa.me/917304949191?text=${message}`;
-
+ const whatsappURL = `https://wa.me/917304949191?text=${encodeURIComponent(message)}`;
 
 window.open(whatsappURL, '_blank');
 
@@ -92,6 +100,7 @@ document.getElementById("hcName").value = "";
 document.getElementById("hcPhone").value = "";
 document.getElementById("hcAddress").value = "";
 document.getElementById("hcDate").value = "";
+document.getElementById("hcService").value = "";
 
 closeModal("loginModal");
      
@@ -216,6 +225,7 @@ document.getElementById('aptForm').addEventListener('submit', function(e) {
     date:       document.getElementById('aptDate').value,
     time:       document.getElementById('aptTime').value,
     collection: document.getElementById('aptCollection').value,
+    service:     document.getElementById('hcService').value,
     address:    document.getElementById('aptAddress').value.trim(),
     bookedAt:   new Date().toLocaleString(),
     status:     'Confirmed'
@@ -274,7 +284,7 @@ function downloadPDF(appt) {
   doc.text('Shreenathji Path Labs', 42, 18);
   doc.setFontSize(9);
   doc.setFont('helvetica', 'normal');
-  doc.text('NABL Accredited · ISO 9001:2015 · Trusted Since 1999', 42, 26);
+  doc.text('NABL Accredited · ISO 9001:2015 · Trusted Since 2021', 42, 26);
   doc.text('12, Medical Complex, Nathdwara Road, Rajsamand, Rajasthan – 313301', 42, 32);
 
 
@@ -362,7 +372,7 @@ function downloadPDF(appt) {
   doc.rect(0, 272, 210, 25, 'F');
   doc.setTextColor(255, 255, 255);
   doc.setFontSize(9);
-  doc.text('📞 +91 98765 43210   |   💬 WhatsApp: +91 98765 43210', 105, 282, { align: 'center' });
+  doc.text('📞 +91 7304949191   |   💬 WhatsApp: +91 7304949191', 105, 282, { align: 'center' });
   doc.text('📧 info@shreenathjipathlabs.com   |   🌐 www.shreenathjipathlabs.com', 105, 289, { align: 'center' });
 
   doc.save(`SNPL_Appointment_${appt.id.slice(-6)}.pdf`);
@@ -378,7 +388,7 @@ function shareViaWhatsApp(appt) {
     `👤 Patient: ${appt.name}\n📞 Phone: ${appt.phone}\n` +
     `🧪 Test: ${appt.test}\n📅 Date: ${appt.date}\n⏰ Time: ${appt.time}\n` +
     `🏠 Collection: ${appt.collection}\n✅ Status: ${appt.status || 'Confirmed'}\n\n` +
-    `For queries call: +91 98765 43210`;
+    `For queries call: +91 7304949191`;
   window.open(`https://wa.me/?text=${encodeURIComponent(msg)}`, '_blank');
 }
 
@@ -413,7 +423,7 @@ window.addEventListener('scroll', () => {
 });
 
 
-/* ── HAMBURGER ────────────────────────────────────────── */
+
 
 document.getElementById('hamburger').onclick = () => {
   document.getElementById('navLinks').classList.toggle('open');
@@ -423,7 +433,7 @@ document.querySelectorAll('.nav-links a').forEach(a => {
 });
 
 
-/* ── COUNTER ANIMATION ────────────────────────────────── */
+
 
 function animateCounters() {
   document.querySelectorAll('.stat-num').forEach(el => {
@@ -440,7 +450,7 @@ function animateCounters() {
 let countersStarted = false;
 
 
-/* ── SCROLL REVEAL ────────────────────────────────────── */
+
 
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(e => {
@@ -454,7 +464,7 @@ const revealObserver = new IntersectionObserver(entries => {
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 
-/* ── HERO OBSERVER (counters) ─────────────────────────── */
+
 
 const heroObserver = new IntersectionObserver(entries => {
   if (entries[0].isIntersecting && !countersStarted) {
@@ -464,7 +474,7 @@ const heroObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.3 });
 heroObserver.observe(document.querySelector('.hero-stats'));
 
-/* ── DNA HELIX BUILD ──────────────────────────────────── */
+
 
 function buildDNA() {
   const container = document.getElementById('dnaRungs');
@@ -485,7 +495,7 @@ function buildDNA() {
 buildDNA();
 
 
-/* ── FLOATING PARTICLES ───────────────────────────────── */
+
 
 function createParticles() {
   const canvas = document.createElement('canvas');
@@ -594,6 +604,7 @@ document.getElementById("aptForm").addEventListener("submit", function(e) {
     const test = document.getElementById("aptTest").value;
     const date = document.getElementById("aptDate").value;
     const time = document.getElementById("aptTime").value;
+    const service = document.getElementById("hcAddress").value;
     const sample = document.getElementById("aptCollection").value;
     const address = document.getElementById("aptAddress").value;
 
@@ -612,6 +623,7 @@ document.getElementById("aptForm").addEventListener("submit", function(e) {
                       `*Test:* ${test}%0A` +
                       `*Date:* ${date} | *Time:* ${time}%0A` +
                       `*Sample:* ${sample}%0A` +
+                      `*service:* ${service}%0A` +
                       `*Address/Notes:* ${address}%0A%0A` +
                       `_From Shreenathjii Path Laboratory Website_`;
 

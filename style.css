@@ -1732,3 +1732,17 @@ font-size:18px;
 .nav-links li.dropdown-h:hover .dropdown-home{
   display: block;
 }
+
+#toast {
+  visibility: hidden;
+  background: #27ae60;
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 8px;
+  position: fixed;
+  z-index: 9999;
+  bottom: 30px;
+  right: 30px;
+  transition: 0.3s;
+}
+#toast.show { visibility: visible; bottom: 50px; }

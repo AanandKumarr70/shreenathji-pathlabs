@@ -838,8 +838,8 @@
     </div>
 
     <div class="form-group">
-  <label>Service Area *</label>
-  <select id="hcAddress" required>
+  <label>Area Service *</label>
+  <select id="hcService" required>
     <option value="">Select Your Area</option>
     <option value="Andheri">Andheri</option>
     <option value="Bandra">Bandra</option>
@@ -863,10 +863,12 @@
       <input type="date" id="hcDate">
     </div>
 
-    <button class="btn-home btn-block" onclick="bookHomeCollection()">
+    <button type="button" class="btn-home btn-block" onclick="bookHomeCollection(event)">
       <i class="fas fa-house-medical"></i>
       Book Home Collection
     </button>
+    
+<div id="toast"></div>
   </div>
 </div>
 
