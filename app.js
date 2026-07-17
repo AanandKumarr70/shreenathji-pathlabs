@@ -50,69 +50,62 @@ document.querySelectorAll(".modal-overlay").forEach((modal) => {
   });
 });
 
-
-
-async function bookHomeCollection(event) {
+function bookHomeCollection(event) {
   event.preventDefault();
-  console.log("button clicked")
+
 
   const name = document.getElementById("hcName").value.trim();
   const phone = document.getElementById("hcPhone").value.trim();
-  const address = document.getElementById("hcAddress").value.trim();
+  const area = document.getElementById("hcArea").value.trim();
   const date = document.getElementById("hcDate").value;
   const service = document.getElementById("hcService").value;
 
 
-  if (!name) {
-    return showToast("Please enter your name", "error");
-  }
+  if (!name) return showToast("Please enter your name", "error");
+  if (!phone) return showToast("Please enter your mobile number", "error");
+  if (phone.length < 10) return showToast("Please enter valid mobile number", "error");
+  if (!area) return showToast("Please enter your address", "error");
+  if (!service) return showToast("Please select your area", "error");
 
-  if (!phone) {
-    return showToast("Please enter your mobile number", "error");
-  }
 
-  if (!address) {
-    return showToast("Please enter your address", "error");
-  }
+  let message = `*New Home Collection Booking*%0A%0A`;
+  message += `*Patient Name:* ${name}%0A`;
+  message += `*Mobile:* ${phone}%0A`;
+  message += `*Area:* ${area}%0A`;
+  message += `*Preferred Date:* ${date ? date : 'Not Selected'}%0A`;
+  message += `*Area Service:* ${service}%0A`;
+  message += `*Test:* Home Sample Collection%0A%0A`;
+  message += `_From Shreenathjii Path Laboratory Website_`;
 
-  if (!service) {
-    return showToast("Please select your area", "error");
-}
+  const whatsappURL = `https://wa.me/917304949191?text=${encodeURIComponent(message)}`;
+window.open(whatsappURL, "_blank");
 
-  try {
-
-const message = `*New Home Collection Booking*%0A%0A` +
-              `*Patient Name:* ${name}%0A` +
-              `*Mobile:* ${phone}%0A` +
-              `*Address:* ${address}%0A` +
-              `*Preferred Date:* ${date}%0A` +
-              `*Area Service:* ${service}%0A` +
-              `*Test:* Home Sample Collection%0A%0A` +
-              `_From Shreenathjii Path Laboratory Website_`;
-
- const whatsappURL = `https://wa.me/917304949191?text=${encodeURIComponent(message)}`;
-
-window.open(whatsappURL, '_blank');
-
-showToast("Home Collection Booked Successfully!", "success");
+  showToast("Opening WhatsApp...", "success");
     
-document.getElementById("hcName").value = "";
-document.getElementById("hcPhone").value = "";
-document.getElementById("hcAddress").value = "";
-document.getElementById("hcDate").value = "";
-document.getElementById("hcService").value = "";
 
-closeModal("loginModal");
-     
-  } catch (err) {
-
-    console.error(err);
-    showToast("Server Error! Please try again.", "error");
-
-  }
-
+  setTimeout(() => {
+    document.getElementById("hcName").value = "";
+    document.getElementById("hcPhone").value = "";
+    document.getElementById("hcArea").value = "";
+    document.getElementById("hcDate").value = "";
+    document.getElementById("hcService").value = "";
+    closeModal("loginModal");
+  }, 1000);
 }
 
+function closeModal(modalId) {
+  document.getElementById(modalId).style.display = "none";
+  document.body.style.overflow = "auto";
+}
+
+function showToast(message, type) {
+  const toast = document.getElementById("toast");
+  if(!toast) return;
+  toast.textContent = message;
+  toast.style.backgroundColor = type === "error" ? "#e74c3c" : "#25D366"; // WhatsApp green
+  toast.classList.add("show");
+  setTimeout(() => { toast.classList.remove("show"); }, 3000);
+}
 
     function openGoogleMap() {
     window.open(
