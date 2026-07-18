@@ -68,17 +68,20 @@ function bookHomeCollection(event) {
   if (!service) return showToast("Please select your area", "error");
 
 
-  let message = `*New Home Collection Booking*%0A%0A`;
-  message += `*Patient Name:* ${name}%0A`;
-  message += `*Mobile:* ${phone}%0A`;
-  message += `*Area:* ${area}%0A`;
-  message += `*Preferred Date:* ${date ? date : 'Not Selected'}%0A`;
-  message += `*Area Service:* ${service}%0A`;
-  message += `*Test:* Home Sample Collection%0A%0A`;
-  message += `_From Shreenathjii Path Laboratory Website_`;
+  let message = `*New Home Collection Booking*
 
-  const whatsappURL = `https://wa.me/917304949191?text=${encodeURIComponent(message)}`;
-window.open(whatsappURL, "_blank");
+*Patient Name:* ${name}
+*Mobile:* ${phone}
+*Area:* ${area}
+*Preferred Date:* ${date ? date : 'Not Selected'}
+*Area Service:* ${service}
+*Test:* Home Sample Collection
+
+_From Shreenathjii Path Laboratory Website_`;
+
+const whatsappURL = `https://wa.me/917304949191?text=${encodeURIComponent(message)}`;
+
+window.location.href = whatsappURL;
 
   showToast("Opening WhatsApp...", "success");
     
@@ -218,7 +221,6 @@ document.getElementById('aptForm').addEventListener('submit', function(e) {
     date:       document.getElementById('aptDate').value,
     time:       document.getElementById('aptTime').value,
     collection: document.getElementById('aptCollection').value,
-    service:     document.getElementById('hcService').value,
     address:    document.getElementById('aptAddress').value.trim(),
     bookedAt:   new Date().toLocaleString(),
     status:     'Confirmed'
@@ -602,37 +604,37 @@ document.getElementById("aptForm").addEventListener("submit", function(e) {
     const address = document.getElementById("aptAddress").value;
 
   
-    if (!name || !phone || !test || !date) {
-        return showToast("Please fill all required fields *", "error");
-    }
+    if (!name || !phone || !test || !date || !service) {
+    return showToast("Please fill all required fields *", "error");
+}
 
-    try {
-    
-        const message = `*New Lab Appointment Booking*%0A%0A` +
-                      `*Name:* ${name}%0A` +
-                      `*Age:* ${age} | *Gender:* ${gender}%0A` +
-                      `*Mobile:* ${phone}%0A` +
-                      `*Email:* ${email}%0A` +
-                      `*Test:* ${test}%0A` +
-                      `*Date:* ${date} | *Time:* ${time}%0A` +
-                      `*Sample:* ${sample}%0A` +
-                      `*service:* ${service}%0A` +
-                      `*Address/Notes:* ${address}%0A%0A` +
-                      `_From Shreenathjii Path Laboratory Website_`;
+    const message = `
+*New Lab Appointment Booking*
 
-    
-        const whatsappURL = `https://wa.me/917304949191?text=${message}`;
-        
-      
-        window.open(whatsappURL, '_blank');
+*Name:* ${name}
+*Age:* ${age}
+*Gender:* ${gender}
+*Mobile:* ${phone}
+*Email:* ${email}
+*Test:* ${test}
+*Date:* ${date}
+*Time:* ${time}
+*Sample Collection:* ${sample}
+*Service Area:* ${service}
+*Address:* ${address}
+
+_From Shreenathjii Path Laboratory Website_
+`;
+
+const whatsappURL =
+`https://wa.me/917304949191?text=${encodeURIComponent(message)}`;
+
+window.location.href = whatsappURL;
 
         showToast("Appointment Request Sent!", "success");
         
       
         document.getElementById("aptForm").reset();
 
-    } catch (err) {
-        console.error(err);
-        showToast("Server Error! Please try again.", "error");
-    }
+    
 });
